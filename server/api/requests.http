@@ -1,2 +1,13 @@
 GET {{host}}/adCampaigns
 Accept: application/json
+# {"data": [
+#    {
+#      "id": 1,
+#      "title": "asd",
+#      "subtitle": "asd",
+#      "text": "asdf",
+#      "buttonText": "asf",
+#      "buttonUrl": "/",
+#      "background": "/static/img/1447ecf79609a769c04abb2f7c8c290a.png"
+#    }
+# ]}
