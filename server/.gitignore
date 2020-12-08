@@ -141,3 +141,4 @@ cython_debug/
 
 /organicsystems/settings.py
 /.idea
+/static

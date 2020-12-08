@@ -1,7 +1,31 @@
 from django.db.models import *
+import helpers.random_hash
+import helpers.download_image
+from organicsystems import settings
 
 
-class AdCampaigns(Model):
+def save_model_with_photo(
+        model,
+        url_field: str,
+        file_field: str
+):
+    url = model.__getattribute__(url_field)
+    if url:
+        model.__setattr__(
+            file_field,
+            helpers.download_image.save_photo(url, settings.IMAGE_URL)
+        )
+        model.__setattr__(url_field, None)
+
+
+class AdCampaign(Model):
+    class Meta:
+        verbose_name = 'Баннер'
+        verbose_name_plural = 'Баннеры'
+
+    def __str__(self):
+        return self.title
+
     id = AutoField(primary_key=True)
     title = TextField("Заголовок")
     subtitle = TextField("Подзаголовок")
@@ -17,6 +41,20 @@ class AdCampaigns(Model):
         verbose_name="Ссылка кнопки",
         max_length=511
     )
+    background_url = CharField(
+        verbose_name='Ссылка на фон',
+        max_length=511,
+        blank=True, null=True
+    )
+    background = ImageField(
+        verbose_name='Фон',
+        upload_to=helpers.random_hash.hash_filename,
+        null=True, blank=True
+    )
+
+    def save(self, *a, **kw):
+        save_model_with_photo(self, 'background_url', 'background')
+        super().save(*a, **kw)
 
 
 class Workshop(Model):

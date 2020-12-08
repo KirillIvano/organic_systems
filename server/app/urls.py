@@ -6,7 +6,7 @@ urlpatterns = [
     path('adCampaigns', ad_campaign.get_all),
 
     # forms
-    path('/forms/newsletter', forms.newsletter),
+    path('forms/newsletter', forms.newsletter),
 ]
 
 forms = [

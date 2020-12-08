@@ -1,11 +1,11 @@
-from app.models import AdCampaigns
+from app.models import AdCampaign
 from app.db_interface import tools
 
 
 def get_all():
     return list(
         tools.select_from_query(
-            AdCampaigns.objects.all(),
+            AdCampaign.objects.all(),
             [
                 ('id', 'id'),
                 ('title', 'title'),
