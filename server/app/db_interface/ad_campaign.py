@@ -13,6 +13,7 @@ def get_all():
                 ('text', 'text'),
                 ('button_text', 'buttonText'),
                 ('button_url', 'buttonUrl'),
+                ('background', 'background')
             ]
         )
     )
