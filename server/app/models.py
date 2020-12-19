@@ -51,6 +51,11 @@ class AdCampaign(Model):
         upload_to=helpers.random_hash.hash_filename,
         null=True, blank=True
     )
+    font_color = CharField(
+        max_length=6,
+        verbose_name="Цвет шрифта",
+        default="000000"
+    )
 
     def save(self, *a, **kw):
         save_model_with_photo(self, 'background_url', 'background')

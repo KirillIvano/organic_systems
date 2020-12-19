@@ -5,3 +5,4 @@ from app.models import *
 @admin.register(AdCampaign)
 class AdCampaigns(admin.ModelAdmin):
     pass
+
