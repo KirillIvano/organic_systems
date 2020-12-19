@@ -9,6 +9,6 @@ Accept: application/json
 #      "buttonText": "asf",
 #      "buttonUrl": "/",
 #      "background": "/static/img/1447ecf79609a769c04abb2f7c8c290a.png",
-#      "fontColor": "000000"
+#      "fontColor": "dark"/"light"
 #    }
 # ]}

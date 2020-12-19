@@ -54,7 +54,11 @@ class AdCampaign(Model):
     font_color = CharField(
         max_length=6,
         verbose_name="Цвет шрифта",
-        default="000000"
+        choices=[
+            ("dark", "Тёмный"),
+            ("light", "Светлый"),
+        ],
+        default="dark"
     )
 
     def save(self, *a, **kw):
