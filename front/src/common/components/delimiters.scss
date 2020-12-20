@@ -1,0 +1,13 @@
+@import "~vars/pads";
+@import "~vars/colors";
+
+.hr_sm {
+    width: $pad8;
+    height: 1px;
+
+    background: $black;
+}
+
+.hr_light {
+    background-color: white;
+}

@@ -1,0 +1,92 @@
+@import "~vars/colors";
+@import "~vars/pads";
+@import "~vars/screens";
+
+.container_green {
+    background: $firm_green;
+}
+
+.container_pink {
+    background: $firm_red;
+}
+
+.container_v-padded {
+    padding-top: $pad16;
+    padding-bottom: $pad16;
+}
+
+.container_dual {
+    display: flex;
+
+    .container_dual__item {
+        flex: 1 1 50%;
+    }
+}
+
+.padded-content_left {
+    max-width: 600px;
+
+    padding-left: $pad4;
+    padding-right: $pad16;
+
+    margin-right: 0;
+    margin-left: auto;
+}
+.padded-content_right {
+    max-width: 600px;
+
+    padding-right: $pad4;
+    padding-left: $pad16;
+
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.container_responsive {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: $pad4;
+    padding-right: $pad4;
+}
+
+.container_centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.container_absolutely-responsive {
+    left: 50%;
+    max-width: 1200px;
+
+    padding-left: $pad4;
+    padding-right: $pad4;
+
+    transform: translateX(-50%);
+}
+
+@media all and (max-width: $screen_sm) {
+    .container_v-padded {
+        padding-top: $pad8;
+        padding-bottom: $pad8;
+    }
+
+    .container_dual {
+        flex-direction: column;
+
+        .container_dual__item {
+            flex: initial;
+        }
+    }
+
+    .padded-content_right {
+        padding-left: $pad4;
+    }
+
+    .padded-content_left {
+        padding-left: $pad4;
+    }
+}

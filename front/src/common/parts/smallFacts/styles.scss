@@ -1,0 +1,34 @@
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/screens";
+@import "~vars/fonts";
+
+.facts-section {
+    padding-bottom: $pad6;
+    padding-top: $pad3;
+}
+
+.small-fact {
+    max-width: 200px;
+    margin-top: $pad3;
+
+    .small-fact__content {
+        height: 100%;
+
+        padding: $pad1;
+        padding-left: $pad4;
+
+        font-size: $font_sm;
+        font-family: $font_secondary;
+
+        border-left: 2px solid black;
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .small-fact {
+        .small-fact__content {
+            font-size: $font_xs;
+        }
+    }
+}

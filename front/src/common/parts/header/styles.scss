@@ -1,0 +1,31 @@
+@import "~vars/pads";
+@import "~vars/colors";
+
+.header {
+    padding-top: $pad2;
+    padding-bottom: $pad2;
+
+    background: black;
+    color: white;
+
+    &__content {
+        display: flex;
+    }
+
+    .header-logo {
+        &__img {
+            height: 40px;
+        }
+    }
+
+    &__burger {
+        width: 40px;
+        height: 40px;
+
+        background: repeating-linear-gradient(0deg, $black 0, $black 20%, transparent 0, transparent 40%);
+    }
+
+    &__nav {
+
+    }
+}

@@ -1,0 +1,48 @@
+@import "~vars/fonts";
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/screens";
+
+.heading_main {
+    padding-bottom: $pad4;
+
+    font-size: $font_xxxl;
+    font-weight: normal;
+}
+.heading_secondary {
+    padding-bottom: $pad3;
+    padding-top: $pad3;
+
+    font-size: $font_xl;
+    font-style: italic;
+}
+
+.text_simple {
+    font-size: $font_sm;
+    font-family: $font_secondary;
+
+    line-height: 1.5;
+}
+.text_italic {
+    font-style: italic;
+}
+.text_centered {
+    text-align: center;
+}
+
+.text_dark {
+    color: $black;
+}
+.text_light {
+    color: $white;
+}
+
+@media all and (max-width: $screen_sm) {
+    .heading_main {
+        font-size: $font_xl;
+    }
+
+    .heading_secondary {
+        font-size: $font_lg;
+    }
+}
