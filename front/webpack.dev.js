@@ -2,6 +2,7 @@ const {merge} = require('webpack-merge');
 
 const {config, consts} = require('./webpack.config');
 
+
 const dev = {
     mode: 'development',
     devtool: 'source-map',
@@ -15,9 +16,6 @@ const dev = {
             'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization, Cache-Control',
         },
     },
-
-    watch: true,
-
     module: {
         rules: [
             {

@@ -1,43 +1,49 @@
 const path = require('path');
-const fs = require('fs');
 const {DefinePlugin, ProvidePlugin} = require('webpack');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 const SRC_PATH = path.resolve(__dirname, 'src');
-const DIST_PATH = path.resolve(__dirname, '_site', 'static');
+const DIST_PATH = path.resolve(__dirname, 'dist');
+const TEMPLATES_PATH = path.resolve(__dirname, '_site');
+
 const PAGES_PATH = path.resolve(SRC_PATH, 'pages');
-const PAGE_INDEX_PATTERN = /index\.(js|ts)/;
 
+const getScriptPath = filePath => path.join(SRC_PATH, filePath);
+const getTemplatePath = filePath => path.join(TEMPLATES_PATH, filePath);
+const getOutputTemplatePath = filePath => path.join(DIST_PATH, filePath);
 
-const getPageIndexPath = pageFolderName => {
-    const pageFilesNames = fs.readdirSync(path.resolve(PAGES_PATH, pageFolderName));
-
-    const indexFileName = pageFilesNames.filter(
-        fileName => PAGE_INDEX_PATTERN.test(fileName),
-    )[0];
-
-    return path.resolve(PAGES_PATH, pageFolderName, indexFileName);
+const pagesConfig = {
+    main: {
+        entry: '/pages/main/index.ts',
+        template: '/index.html',
+    },
+    courses: {
+        entry: '/pages/courses/index.ts',
+        template: '/courses/index.html',
+    },
 };
 
-const createPagesConfigs = () => {
-    const pagesFolders = fs.readdirSync(PAGES_PATH);
 
-    const entries = {};
+const getEntries = pagesDescriptor =>
+    Object.keys(pagesDescriptor).reduce(
+        (acc, key) => {
+            acc[key] = getScriptPath(pagesConfig[key].entry);
 
-    for (const pageFolder of pagesFolders) {
-        const pageIndexPath = getPageIndexPath(pageFolder);
+            return acc;
+        },
+        {},
+    );
 
-        entries[pageFolder] = pageIndexPath;
-    }
-
-    return {
-        entries,
-    };
-};
-
-const pagesConfig = createPagesConfigs();
-
+const getPlugins = pagesDescriptor =>
+    Object.entries(pagesDescriptor).map(
+        ([name, {template}]) => new HTMLWebpackPlugin({
+            filename: getOutputTemplatePath(template),
+            template: getTemplatePath(template),
+            chunks: [name],
+        }),
+    );
 
 module.exports.consts = {
     SRC_PATH,
@@ -46,7 +52,7 @@ module.exports.consts = {
 };
 
 module.exports.config = {
-    entry: pagesConfig.entries,
+    entry: getEntries(pagesConfig),
     resolve: {
         extensions: ['.js', '.ts'],
         alias: {
@@ -55,8 +61,8 @@ module.exports.config = {
         },
     },
     output: {
-        path: path.resolve(DIST_PATH),
-        publicPath: '/',
+        path: DIST_PATH,
+        publicPath: '',
         filename: '[name].js',
         chunkFilename: '[name].chunk.js',
     },
@@ -69,6 +75,12 @@ module.exports.config = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: path.join(TEMPLATES_PATH, '/files'), to: path.join(DIST_PATH, '/files')},
+            ],
+        }),
+        ...getPlugins(pagesConfig),
     ],
     module: {
         rules: [

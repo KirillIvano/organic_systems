@@ -1,33 +1,38 @@
 const {merge} = require('webpack-merge');
 const CssMinimizer = require('css-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgeCss = require('purgecss-webpack-plugin');
 const TerserJs = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack');
+const glob = require('glob');
 
-const {config} = require('./webpack.config');
+const {config, consts} = require('./webpack.config');
 
+console.log(glob.sync(`${consts.SRC_PATH}/**/*`,  {nodir: true}));
 
 const prodConfigs = {
     mode: 'production',
     optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    test: /[\\/]node_modules[\\/](flexboxgrid2)/,
-                    name: 'vendors',
-                    chunks: 'all',
-                },
-            },
-        },
+        // splitChunks: {
+        //     cacheGroups: {
+        //         commons: {
+        //             test: /[\\/]node_modules[\\/](flexboxgrid2)/,
+        //             name: 'vendors',
+        //             chunks: 'all',
+        //         },
+        //     },
+        // },
         minimizer: [
             new TerserJs(),
             new CssMinimizer(),
         ],
     },
     plugins: [
-        // new MiniCssExtractPlugin({
-        //     filename: 'main.css',
-        //     chunkFilename: '[id].[hash].css',
-        // }),
+        new PurgeCss({
+            paths: glob.sync(`${consts.SRC_PATH}/**/*`,  {nodir: true}),
+            rejected: true,
+        }),
+        new MiniCssExtractPlugin(),
         new ImageminPlugin({
             cache: true,
             imageminOptions: {
@@ -54,7 +59,12 @@ const prodConfigs = {
             {
                 test: /\.(sc|c)ss$/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/files',
+                        },
+                    },
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -75,11 +85,11 @@ const prodConfigs = {
                 test: /\.(png|svg|jpg|ico|ttf|woff2|eot|woff)$/,
                 use: [
                     {
-                        loader: 'url-loader',
-                        // options: {
-                        //     outputPath: 'images/[name]/',
-                        //     name: '[name]_[hash].[ext]',
-                        // },
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: '/files',
+                            name: '[name]_[hash].[ext]',
+                        },
                     },
                 ],
             },
