@@ -11,31 +11,39 @@
             </p>
 
             <form class="newsletter__form" id="newsletterForm">
-                <label for="newsletter_email" class="visually-hidden">
-                    Почта для рассылки
-                </label>
+                <p class="newsletter__error-message">Ошибка, попробуйте ещё раз</p>
+                <p class="newsletter__success-message">Вы успешно подписаны!</p>
 
-                <input class="input newsletter__email" id="newsletter_email" placeholder="Ваша почта" name="email"
-                    type="email">
+                <div class="newsletter__form-content">
+                    <label for="newsletter_email" class="visually-hidden">
+                        Почта для рассылки
+                    </label>
+                    <input class="input newsletter__email" id="newsletter_email" placeholder="Ваша почта" name="email"
+                        type="email">
 
-                <button class="button button_light newsletter__submit">
-                    Подписаться.
-                </button>
+                    <button class="button button_light newsletter__submit">
+                        Подписаться.
+                    </button>
+                </div>
             </form>
         </div>
 
         <div class="newsletter__social">
-            <a href="/facebook" class="newsletter__social-anchor">
-                <img src="/files/facebook-icon.svg" class="fab fa-facebook-f newsletter__social-icon">
+            <a class="newsletter__social-anchor" href="http://www.facebook.com/pages/Moscow-Russia/Organic-Systems-Russia/166371736725344">
+                <span class="visually-hidden">facebook</span>
+                <img 
+                    aria-hidden="true"
+                    src="/files/facebook-icon.svg"
+                    class="newsletter__social-icon"
+                >
             </a>
-            <a href="/facebook" class="newsletter__social-anchor">
-                <img src="/files/facebook-icon.svg" class="fab fa-facebook-f newsletter__social-icon"/>
-            </a>
-            <a href="/facebook" class="newsletter__social-anchor">
-                <img src="/files/facebook-icon.svg" class="fab fa-facebook-f newsletter__social-icon"/>
-            </a>
-            <a href="/facebook" class="newsletter__social-anchor">
-                <img src="/files/facebook-icon.svg" class="fab fa-facebook-f newsletter__social-icon"/>
+            <a class="newsletter__social-anchor" href="https://www.instagram.com/organiccoloursystems_rus/">
+                <span class="visually-hidden">instagram</span>
+                <img 
+                    aria-hidden="true"
+                    src="/files/instagram-icon.svg"
+                    class="newsletter__social-icon"
+                >
             </a>
         </div>
     </div>
