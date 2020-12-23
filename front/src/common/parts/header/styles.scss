@@ -1,31 +1,296 @@
 @import "~vars/pads";
 @import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/screens";
 
 .header {
-    padding-top: $pad2;
-    padding-bottom: $pad2;
+    display: flex;
+
+    height: 80px;
 
     background: black;
     color: white;
 
-    &__content {
+    .header__content {
         display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        flex-direction: row;
     }
 
     .header-logo {
         &__img {
-            height: 40px;
+            height: 54px;
+        }
+    }
+}
+
+
+$burgerSize: 24px;
+$burgerLineHeight: 2.5px;
+$closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
+
+.burger {
+    position: relative;
+    display: none;
+
+    align-items: center;
+
+    height: $burgerSize;
+
+    cursor: pointer;
+
+    .burger__content {
+        width: $burgerSize;
+        height: $burgerLineHeight;
+
+        background: $firm_green;
+
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+
+        width: $burgerSize;
+        height: $burgerLineHeight;
+
+        background: $firm_green;
+
+        transform-origin: left center;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        top: 21.5px;
+    }
+}
+
+
+.burger.activated {
+    .burger__content {
+        transform: scale(0);
+    }
+
+    &::before {
+        transform: rotate(45deg) scaleX($closeScale);
+    }
+
+    &::after {
+        transform: rotate(-45deg) scaleX($closeScale);
+    }
+}
+
+.navbar {
+    height: 100%;
+
+    .navbar__list {
+        position: relative;
+
+        display: flex;
+        align-items: stretch;
+
+        height: 100%;
+
+        .navbar__list-item {
+            padding-left: $pad3;
+            padding-right: $pad3;
+
+            height: 100%;
+
+            color: $white;
+            font-size: $font_sm;
+            font-family: $font_secondary;
+
+            transition: color 0.3s ease-in-out;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .navbar__link {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+
+                height: 100%;
+
+                font-size: $font_xs;
+
+                transition: color 0.3s ease-in-out;
+
+                &:hover,
+                &:focus {
+                    color: $firm_green;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+
+                    left: 50%;
+                    right: 50%;
+
+                    bottom: 0;
+                    height: 3px;
+
+                    background: $firm_green;
+                    opacity: 0;
+
+                    transition:
+                        opacity 0.2s ease-in,
+                        left 0.2s ease-in-out,
+                        right 0.2s ease-in-out;
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                    left: 0;
+                    right: 0;
+                }
+            }
+
+            .navbar__item-menu {
+                z-index: 1000;
+
+                position: absolute;
+                top: 100%;
+
+                visibility: hidden;
+                opacity: 0;
+                transform: translateX(20px);
+
+                transition:
+                    visibility 0.2s ease-in-out,
+                    opacity 0.2s ease-in-out,
+                    transform 0.2s ease-in-out;
+            }
+
+            .navbar__link:hover ~ .navbar__item-menu,
+            .navbar__link:focus ~ .navbar__item-menu,
+            .navbar__item-menu:hover,
+            .navbar__item-menu:focus-within {
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.mobile-navbar {
+    z-index: 1000;
+    overflow-y: scroll;
+
+    position: fixed;
+    top: 80px;
+
+    height: 100vh;
+    width: 100%;
+
+    padding-top: $pad10;
+    padding-bottom: 200px;
+
+    background: white;
+    font-family: $font_secondary;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    .mobile-navbar__list {
+        padding-left: $pad6;
+
+        .mobile-navbar__link {
+            display: block;
+        }
+
+        .mobile-navbar__list-item {
+            padding: $pad1;
+
+            font-size: $font_xs;
+        }
+
+        .mobile-navbar__heading {
+            padding: $pad2;
+
+            font-weight: bold;
+            color: $black;
+        }
+    }
+}
+
+.mobile-navbar.opened {
+    transform: translateX(0);
+}
+
+.nav-menu {
+    width: 150px;
+
+    background-color: $white;
+
+    font-family: $font_secondary;
+    font-size: $font_xs;
+    color: $black;
+
+    .nav-menu__item {
+        .nav-menu__link {
+            position: relative;
+
+            display: block;
+            padding: $pad2;
+
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $firm_green;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+
+                left: 0;
+                right: 100%;
+
+                bottom: 0;
+                height: 3px;
+
+                background: $firm_green;
+                opacity: 0;
+
+                transition:
+                    opacity 0.4s ease-in,
+                    left 0.4s ease-in-out,
+                    right 0.4s ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: $screen_md) {
+    .header {
+        .navbar {
+            display: none;
         }
     }
 
-    &__burger {
-        width: 40px;
-        height: 40px;
-
-        background: repeating-linear-gradient(0deg, $black 0, $black 20%, transparent 0, transparent 40%);
-    }
-
-    &__nav {
-
+    .burger {
+        display: flex;
     }
 }
