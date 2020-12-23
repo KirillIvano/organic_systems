@@ -4,7 +4,6 @@ import {BusInterface} from '@/services/interfaces/BusInterface';
 
 import {BusAction} from './types';
 
-
 @injectable()
 export class Bus<TAction extends Record<string, BusAction>> implements BusInterface<TAction> {
     private readonly _handlers: {[K in keyof TAction]?: Array<((payload: TAction[K]) => unknown)>} = {};
@@ -34,6 +33,7 @@ export class Bus<TAction extends Record<string, BusAction>> implements BusInterf
     }
 
     fire<TName extends keyof TAction>(payload: TAction[TName]): void {
+        // eslint-disable-next-line no-console
         console.info(payload);
 
         this.runHandlers(payload);
