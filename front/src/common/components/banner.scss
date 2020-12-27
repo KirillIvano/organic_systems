@@ -34,19 +34,16 @@
         left: 0;
         right: 0;
 
-        background: rgba(0, 0, 0, 0);
-        transition: background-color 0.3s ease-in-out;
+        background: rgba(124, 114, 114, 0);
     }
 
     .banner__content {
-        position: absolute;
         top: 0;
         left: 0;
 
         height: 100%;
-        width: 100%;
 
-        max-width: 300px;
+        max-width: 480px;
 
         display: flex;
         flex-direction: column;
@@ -54,11 +51,11 @@
         align-items: flex-start;
 
         .banner__heading {
-
+            margin-top: $pad0;
         }
 
         .banner__subheading {
-
+            margin-top: $pad2;
         }
 
         .banner__text {
@@ -92,6 +89,10 @@
                 display: none;
             }
 
+            .banner__subheading_removable {
+                display: none;
+            }
+
             .banner__link {
                 color: $white;
                 border-color: $white;
@@ -103,6 +104,10 @@
                     background: $white;
                     color: $black;
                 }
+            }
+
+            .banner__subheading_removable + .banner__link {
+                margin-top: $pad6;
             }
         }
     }
