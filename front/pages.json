@@ -1,0 +1,42 @@
+{
+    "pages": {
+        "main": {
+            "chunks": ["main-page", "common"],
+            "template": "/index.html"
+        },
+        "history": {
+            "chunks": ["our-history", "common"],
+            "template": "/about/our-history/index.html"
+        },
+        "ethics": {
+            "chunks": ["common"],
+            "template": "/about/our-ethics/index.html"
+        },
+        "science": {
+            "chunks": ["common"],
+            "template": "/about/our-science/index.html"
+        },
+        "support": {
+            "chunks": ["common"],
+            "template": "/about/our-support/index.html"
+        },
+        "products": {
+            "chunks": ["common", "our-range"],
+            "template": "/products/index.html"
+        }
+    },
+    "chunks": {
+        "main-page": {
+            "entry": "/pages/main/index.ts"
+        },
+        "common": {
+            "entry": "/pages/common.ts"
+        },
+        "our-range": {
+            "entry": "/pages/products/ourRange/index.ts"
+        },
+        "our-history": {
+            "entry": "/pages/about/ourHistory/index.ts"
+        }
+    }
+}

@@ -1,58 +1,32 @@
 const {merge} = require('webpack-merge');
 const CssMinimizer = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PurgeCss = require('purgecss-webpack-plugin');
 const TerserJs = require('terser-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack');
-const glob = require('glob');
 
-const {config, consts} = require('./webpack.config');
+const {getBaseConfig} = require('./webpack.config');
+const pagesConfig = require('./pages.json');
 
-console.log(glob.sync(`${consts.SRC_PATH}/**/*`,  {nodir: true}));
 
-const prodConfigs = {
+const getProdSpecificConfig = () => ({
     mode: 'production',
+    devtool: false,
     optimization: {
-        // splitChunks: {
-        //     cacheGroups: {
-        //         commons: {
-        //             test: /[\\/]node_modules[\\/](flexboxgrid2)/,
-        //             name: 'vendors',
-        //             chunks: 'all',
-        //         },
-        //     },
-        // },
+        splitChunks: {
+            cacheGroups: {
+                common: {
+                    test: /[\\/]src[\\/]common/,
+                    name: 'common',
+                    chunks: 'all',
+                },
+            },
+        },
         minimizer: [
             new TerserJs(),
             new CssMinimizer(),
         ],
     },
     plugins: [
-        new PurgeCss({
-            paths: glob.sync(`${consts.SRC_PATH}/**/*`,  {nodir: true}),
-            rejected: true,
-        }),
-        new MiniCssExtractPlugin(),
-        new ImageminPlugin({
-            cache: true,
-            imageminOptions: {
-                plugins: [
-                    ['gifsicle', {interlaced: true}],
-                    ['jpegtran', {progressive: true}],
-                    ['optipng', {optimizationLevel: 5}],
-                    [
-                        'svgo',
-                        {
-                            plugins: [
-                                {
-                                    removeViewBox: false,
-                                },
-                            ],
-                        },
-                    ],
-                ],
-            },
-        }),
+        new MiniCssExtractPlugin({}),
     ],
     module: {
         rules: [
@@ -61,11 +35,11 @@ const prodConfigs = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: '/files',
-                        },
                     },
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {url: false},
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -82,7 +56,7 @@ const prodConfigs = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|ico|ttf|woff2|eot|woff)$/,
+                test: /\.(ico|ttf|woff2|eot|woff)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -95,7 +69,15 @@ const prodConfigs = {
             },
         ],
     },
-};
+});
 
 
-module.exports = merge(config, prodConfigs);
+const getProdWebpackConfig = config =>
+    merge(
+        getBaseConfig(config),
+        getProdSpecificConfig(),
+    );
+
+
+module.exports = getProdWebpackConfig(pagesConfig);
+
