@@ -11,6 +11,9 @@
 
     <main>
         {% block content %}{% endblock content %}
+
+        {% include "parts/smallFacts.njk" %}
+        {% include "parts/newsletter.njk" %}
     </main>
 
     {% block scripts %}{% endblock scripts%}

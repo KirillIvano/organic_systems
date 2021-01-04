@@ -11,7 +11,7 @@
 
     removeSubheadingOnShrink=false
 ) %}
-<div class="banner">
+<div class="banner intro-banner">
     <div aria-hidden="true" class="banner__image-container">
         <img
             class="banner__image"
@@ -22,16 +22,18 @@
 
     <div class="container_absolutely-responsive">
         <div class="banner__content text_{{theme}}">
-            <h2 class="banner__heading heading_main">{{heading}}</h2>
+            <h2 class="banner__heading intro-banner__heading">{{heading}}</h2>
 
             {% if subheading %}
-                <h3 class="banner__subheading {{'banner__subheading_removable' if removeSubheadingOnShrink else ''}} heading_secondary">
+                <h3 class="banner__subheading intro-banner__subheading {{'banner__subheading_removable' if removeSubheadingOnShrink else ''}}">
                     {{subheading}}
                 </h3>
             {% endif %}
 
             {% if content %}
-                <p class="banner__text">{{content}}</p>
+                <p class="banner__text">
+                    {{content}}
+                </p>
             {% endif %}
 
             {% if linkAddress and linkText %}  

@@ -2,140 +2,90 @@
 title: asdasd
 ---
 
-{% extends "layout/main.njk"%}
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
 
 {% block content %}
     <div class="owl-carousel intro-carousel">
-        <div class="banner">
-            <div class="image-banner">
-                <img
-                    class="image-banner__image"
-                    src="/files/main/education-banner.png"
-                    alt=""
-                >
-            </div>
+        {{ 
+            banner(
+                heading='Баннер.',
+                subheading='Описание баннера',
 
-            <div class="banner__content container_v-padded container_absolutely-responsive text_dark">
-                <h2 class="heading_main">Баннер.</h2>
-                
-                <hr class="hr_sm">
+                imgAddress='/files/main/education-banner.webp',
+                theme='dark',
+            
+                linkAddress='TODO',
+                linkText='Подробнее.'
+            ) 
+        }}
 
-                <a
-                    href="TODO"
-                    class="button button_link button_dark mt-6"
-                >
-                    Подробнее.
-                </a>
-            </div>
-        </div>
-        <div class="banner">
-            <div class="image-banner">
-                <img
-                    class="image-banner__image"
-                    src="/files/main/education-banner.png"
-                    alt=""
-                >
-            </div>
+        {{ 
+            banner(
+                heading='Другой баннер.',
+                subheading='Описание баннера',
+                content="текст на баннере",
 
-            <div class="banner__content container_v-padded container_absolutely-responsive">
-                <h2 class="heading_main text_light">Баннер.</h2>
-                
-                <hr class="hr_sm hr_light">
-
-                <a
-                    href="TODO"
-                    class="button button_link button_light mt-6"
-                >
-                    Подробнее.
-                </a>
-            </div>
-        </div>
+                imgAddress='/files/main/education-banner.webp',
+                theme='light',
+            
+                linkAddress='TODO',
+                linkText='Подробнее.'
+            ) 
+        }}
     </div>
 
-    <div class="container_responsive container_v-padded container_centered">
+    <div class="container_responsive container_v-padded text_centered">
         <h2 class="heading_main">Добро пожаловать в Organic Color Systems.</h2>
         
-        <hr class="hr_sm">
+        <hr class="hr_sm hr_padded hr_centered">
 
         <h3 class="heading_secondary">
             Ваше путешествие к здоровому уходу за волосами начинается прямо здесь.
         </h3>
-        <p class="text_simple">
+        <p class="text_simple paragraph_padded">
             Мы - этичный и свободный от жестокости профессиональный бренд для салонов красоты,
             созданный с заботой о здоровье вас, ваших клиентов и волос ваших клиентов. 
             Мы стремимся к созданию более безопасных салонов красоты, и наша уникальная экологическая  наука - вот что отличает нас. Наша Система позволяет вам делать все, что вы обычно делаете, но более естественно, 
             этично, и  без ущерба для производительности.
         </p>
-        <a
-            href="TODO"
-            class="button button_link button_dark mt-3"
-        >
-            Наша история.
-        </a>
-    </div>
 
-    <div class="banner">
-        <div class="image-banner">
-            <img
-                class="image-banner__image"
-                src="/files/main/education-banner.png"
-                alt=""
-            >
-        </div>
-
-        <div class="banner__content container_v-padded container_absolutely-responsive">
-            <h2 class="heading_main text_light">Блог.</h2>
-            
-            <hr class="hr_sm hr_light">
-
+        <div class="container_centered mt-3">
             <a
                 href="TODO"
-                class="button button_link button_light mt-6"
+                class="button button_link button_dark"
             >
-                Подробнее.
+                Наша история.
             </a>
         </div>
     </div>
 
-    <div class="container_dual">
-        <div class="container_pink container_v-padded container_dual__item">
-            <div class="padded-content_left">
-                <h2 class="heading_main">Присоединяйся к революции.</h2>
-                
-                <hr class="hr_sm">
-
-                <h3 class="heading_secondary">Начни свое путешествие сегодня.</h3>
-                <p class="text_simple">Присоединяйтесь к нашему невероятному сообществу и к революции естественного парикмахерского искусства.</p>
-
-                <a
-                    href="TODO"
-                    class="button button_link button_dark mt-3"
-                >
-                    Запишите меня.
-                </a>
-            </div>
+    <div class="banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image"
+                src="/files/main/education-banner.webp"
+                alt=""
+            >
         </div>
 
-        <div class="container_green container_v-padded container_dual__item">
-            <div class="padded-content_right">
-                <h2 class="heading_main">Найдите салон.</h2>
+        <div class="banner__overlay"></div>
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded">
+                <h2 class="heading_main text_light">Блог.</h2>
                 
-                <hr class="hr_sm">
-
-                <h3 class="heading_secondary">Ищете ближайший к вам салон?</h3>
-                <p class="text_simple">Наш Salon Finder находится в разработке! Пожалуйста, напишите нам, чтобы найти ближайший к вам салон.</p>
+                <hr class="banner__delimiter hr_padded hr_sm hr_light">
 
                 <a
                     href="TODO"
-                    class="button button_link button_dark mt-3"
+                    class="button button_link button_light"
                 >
-                    Свяжитесь с нами.
+                    Подробнее.
                 </a>
             </div>
         </div>
     </div>
 
-    {% include "parts/smallFacts.njk" %}
-    {% include "parts/newsletter.njk" %}
+    {% include "parts/actionBanners/allActions.njk" %}
 {% endblock content %}
 
