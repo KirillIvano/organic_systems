@@ -23,6 +23,50 @@
         "products": {
             "chunks": ["common", "our-range"],
             "template": "/products/index.html"
+        },
+        "products/care-range": {
+            "chunks": ["common"],
+            "template": "/product/care-range/index.html"
+        },
+        "products/permament-color": {
+            "chunks": ["common"],
+            "template": "/product/permament-color/index.html"
+        },
+        "products/semi-permament": {
+            "chunks": ["common", "products/semiPermament"],
+            "template": "/product/semi-permament/index.html"
+        },
+        "products/control-styling": {
+            "chunks": ["common", "products/controlStyling"],
+            "template": "/product/control-styling/index.html"
+        },
+        "products/think-curl": {
+            "chunks": ["common"],
+            "template": "/product/think-curl/index.html"
+        },
+        "products/aqua-boost": {
+            "chunks": ["common", "products/careRangeProduct"],
+            "template": "/product/aqua-boost/index.html"
+        },
+        "products/charcoal": {
+            "chunks": ["common", "products/careRangeProduct"],
+            "template": "/product/charcoal/index.html"
+        },
+        "products/keep-curl": {
+            "chunks": ["common", "products/careRangeProduct"],
+            "template": "/product/keep-curl/index.html"
+        },
+        "products/power-build": {
+            "chunks": ["common", "products/careRangeProduct"],
+            "template": "/product/power-build/index.html"
+        },
+        "products/soothe-plus": {
+            "chunks": ["common", "products/careRangeProduct"],
+            "template": "/product/soothe-plus/index.html"
+        },
+        "products/status-quo": {
+            "chunks": ["common", "products/careRangeProduct"],
+            "template": "/product/status-quo/index.html"
         }
     },
     "chunks": {
@@ -37,6 +81,15 @@
         },
         "our-history": {
             "entry": "/pages/about/ourHistory/index.ts"
+        },
+        "products/semiPermament": {
+            "entry": "/pages/products/semiPermament/index.ts"
+        },
+        "products/controlStyling": {
+            "entry": "/pages/products/controlStyling/index.ts"
+        },
+        "products/careRangeProduct": {
+            "entry": "/pages/products/careRangeProduct/index.ts"
         }
     }
 }

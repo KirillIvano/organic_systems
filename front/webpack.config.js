@@ -50,8 +50,8 @@ const getBaseConfig = pagesConfig => ({
     output: {
         path: DIST_PATH,
         publicPath: '',
-        filename: '[name].js',
-        chunkFilename: '[name].chunk.js',
+        filename: '[name].[hash].js',
+        chunkFilename: '[name].[hash].chunk.js',
     },
     plugins: [
         new CleanWebpackPlugin(),

@@ -1,5 +1,5 @@
 module.exports = config => {
-    config.addPassthroughCopy({'./src/images': 'files'});
+    config.addPassthroughCopy({'./src/files': 'files'});
 
     return {
         dataTemplateEngine: 'njk',

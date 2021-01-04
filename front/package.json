@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "webpack-dev": "webpack serve --config ./webpack.dev.js",
-        "elev-dev": "eleventy --serve",
-        "prod": "webpack --config ./webpack.prod.js"
+        "elev-dev": "eleventy --watch",
+        "prod": "node --max-old-space-size=4096 ./node_modules/webpack-cli/bin/cli.js --config ./webpack.prod.js",
+        "add-img": "node ./cli/img-add.js"
     },
     "author": "",
     "license": "ISC",
@@ -20,12 +21,12 @@
         "autoprefixer": "^10.1.0",
         "babel-loader": "^8.2.2",
         "chokidar": "^3.1.0",
+        "clean-webpack-plugin": "^3.0.0",
         "copy-webpack-plugin": "^7.0.0",
         "css-loader": "^5.0.1",
         "css-minimizer-webpack-plugin": "^1.1.5",
         "eslint": "^7.15.0",
         "file-loader": "^6.2.0",
-        "glob": "^7.1.6",
         "html-webpack-plugin": "^5.0.0-beta.1",
         "imagemin": "^7.0.1",
         "imagemin-gifsicle": "^7.0.0",
@@ -37,11 +38,12 @@
         "nunjucks": "^3.2.2",
         "optimize-css-assets-webpack-plugin": "^5.0.4",
         "postcss": "^8.2.1",
-        "postcss-loader": "^4.1.0",
         "purgecss-webpack-plugin": "^3.1.3",
+        "raw-loader": "^4.0.2",
         "reflect-metadata": "^0.1.13",
         "sass": "^1.30.0",
         "sass-loader": "^10.1.0",
+        "sharp": "^0.27.0",
         "style-loader": "^2.0.0",
         "stylelint": "^13.8.0",
         "stylelint-config-standard": "^20.0.0",
@@ -56,12 +58,10 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.1",
-        "del": "^6.0.0",
         "flexboxgrid2": "^7.2.1",
         "focus-visible": "^5.2.0",
-        "inversify": "^5.0.5",
-        "owl-carousel": "^1.0.0",
         "owl.carousel": "^2.3.4",
-        "query-string": "^6.13.7"
+        "query-string": "^6.13.7",
+        "ramda": "^0.27.1"
     }
 }
