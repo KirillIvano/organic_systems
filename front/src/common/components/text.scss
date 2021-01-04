@@ -4,17 +4,14 @@
 @import "~vars/screens";
 
 .heading_main {
-    padding-bottom: $pad4;
-
     font-size: $font_xxxl;
     font-weight: normal;
+    line-height: 1;
 }
 .heading_secondary {
-    padding-bottom: $pad3;
-    padding-top: $pad3;
-
     font-size: $font_xl;
     font-style: italic;
+    line-height: 1;
 }
 
 .text_simple {
@@ -22,6 +19,11 @@
     font-family: $font_secondary;
 
     line-height: 2;
+}
+
+.paragraph_padded {
+    margin-top: $pad4;
+    margin-bottom: $pad4;
 }
 
 .text_italic {
@@ -40,7 +42,7 @@
 
 @media all and (max-width: $screen_sm) {
     .heading_main {
-        font-size: $font_xl;
+        font-size: $font_xxl;
     }
 
     .heading_secondary {

@@ -3,9 +3,9 @@
     src:
         local('Helvetica Neue Light'),
         local('Helvetica-Neue-Light'),
-        url('HelveticaNeueCyr-Light.woff2') format('woff2'),
-        url('HelveticaNeueCyr-Light.woff') format('woff'),
-        url('HelveticaNeueCyr-Light.ttf') format('truetype');
+        url('/files/fonts/neue/HelveticaNeueCyr-Light.woff2') format('woff2'),
+        url('/files/fonts/neue/HelveticaNeueCyr-Light.woff') format('woff'),
+        url('/files/fonts/neue/HelveticaNeueCyr-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }

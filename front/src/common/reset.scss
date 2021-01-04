@@ -1,5 +1,6 @@
 @import "~vars/pads";
 @import "~vars/fonts";
+@import "~vars/colors";
 
 *,
 *::after,
@@ -41,4 +42,16 @@ body {
 
 hr {
     border: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $white;
 }

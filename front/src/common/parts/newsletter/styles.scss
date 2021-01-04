@@ -107,13 +107,15 @@
             width: 100%;
 
             .newsletter__form {
-                flex-direction: column;
+                .newsletter__form-content {
+                    flex-direction: column;
 
-                .newsletter__submit {
-                    flex: auto;
+                    .newsletter__submit {
+                        flex: auto;
 
-                    margin-left: 0;
-                    margin-top: $pad2;
+                        margin-left: 0;
+                        margin-top: $pad2;
+                    }
                 }
             }
         }

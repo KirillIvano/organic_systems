@@ -1,5 +1,3 @@
-import {inject, injectable} from 'inversify';
-
 import {container} from '@/services';
 import {subscribeToNewsletter} from '@/services/news';
 import {BusInterface} from '@/services/interfaces/BusInterface';
@@ -14,14 +12,13 @@ import './styles.scss';
 import {Actions} from '@/events';
 
 
-@injectable()
 class Newsletter {
     private _form: HTMLFormElement;
     private _emailInput: HTMLInputElement;
     private _submitButton: HTMLButtonElement;
 
     constructor(
-        @inject(SERVICES_TYPES.ActionsBus) private _bus: BusInterface<Actions>,
+        private _bus: BusInterface<Actions>,
     ) {
         this._form = document.getElementById('newsletterForm') as HTMLFormElement;
         this._emailInput = this._form.elements[0] as HTMLInputElement;
@@ -78,5 +75,5 @@ class Newsletter {
     }
 }
 
-const newsletter = container.resolve(Newsletter);
+const newsletter = container.inject(SERVICES_TYPES.ActionsBus)(Newsletter);
 newsletter.initForm();

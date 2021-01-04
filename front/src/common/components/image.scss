@@ -1,17 +1,9 @@
-.image-banner {
-    position: relative;
+.lazy-img {
+    opacity: 0;
 
-    overflow: hidden;
-    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
 
-    width: 100%;
-
-    padding-bottom: 42.1%;
-
-    .image-banner__image {
-        position: absolute;
-        top: 0;
-
-        width: 100%;
-    }
+.lazy-img_loaded {
+    opacity: 1;
 }

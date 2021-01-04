@@ -1,5 +1,3 @@
-import {inject, injectable} from 'inversify';
-
 import {Actions} from '@/events';
 import {BusInterface} from '@/services/interfaces/BusInterface';
 import {SERVICES_TYPES} from '@/services/types';
@@ -8,12 +6,11 @@ import './styles.scss';
 import {CLOSE_NAV, navCloseAction, navOpenAction, OPEN_NAV} from '@/events/ui/actions';
 import {container} from '@/services';
 
-@injectable()
 class Navbar {
     private _navbar: HTMLDivElement;
 
     constructor(
-        @inject(SERVICES_TYPES.ActionsBus) private _bus: BusInterface<Actions>,
+        private _bus: BusInterface<Actions>,
     ) {
         this._navbar = document.getElementsByClassName('mobile-navbar')[0] as HTMLDivElement;
     }
@@ -34,13 +31,12 @@ class Navbar {
     }
 }
 
-@injectable()
 class Header {
     private _burger: HTMLDivElement;
     private _isMenuOpened = false;
 
     constructor(
-        @inject(SERVICES_TYPES.ActionsBus) private _bus: BusInterface<Actions>,
+        private _bus: BusInterface<Actions>,
     ) {
         this._burger = document.getElementById('burger') as HTMLDivElement;
     }
@@ -79,8 +75,8 @@ class Header {
 }
 
 
-const header = container.resolve(Header);
-const navbar = container.resolve(Navbar);
+const header = container.inject(SERVICES_TYPES.ActionsBus)(Header);
+const navbar = container.inject(SERVICES_TYPES.ActionsBus)(Navbar);
 
 header.init();
 navbar.init();

@@ -3,15 +3,38 @@
 @import "~vars/fonts";
 @import "~vars/screens";
 
+$primaryHeaderHeight: 32px;
+$headerContentHeight: 80px;
+
 .header {
-    display: flex;
-
-    height: 80px;
-
     background: black;
     color: white;
+    .header__primary-section {
+        background: $firm_green;
+
+        .header__primary-section-content {
+            display: flex;
+            justify-content: flex-end;
+
+            .header__saloon-link {
+                display: flex;
+                place-items: center;
+                height: $primaryHeaderHeight;
+
+                padding-left: $pad4;
+                padding-right: $pad4;
+
+                background: $firm_red;
+                color: $black;
+                font-family: $font_secondary;
+                font-size: $font_xs;
+            }
+        }
+    }
 
     .header__content {
+        height: $headerContentHeight;
+
         display: flex;
 
         align-items: center;
@@ -188,11 +211,13 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
 }
 
 .mobile-navbar {
+    display: none;
+
     z-index: 1000;
     overflow-y: scroll;
 
     position: fixed;
-    top: 80px;
+    top: $headerContentHeight + $primaryHeaderHeight;
 
     height: 100vh;
     width: 100%;
@@ -242,6 +267,8 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
     color: $black;
 
     .nav-menu__item {
+        position: relative;
+
         .nav-menu__link {
             position: relative;
 
@@ -250,7 +277,8 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
 
             transition: color 0.3s ease-in-out;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $firm_green;
             }
 
@@ -273,11 +301,33 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
                     right 0.4s ease-in-out;
             }
 
-            &:hover::after {
+            &:hover::after,
+            &:focus::after {
                 opacity: 1;
                 left: 0;
                 right: 0;
             }
+        }
+
+        .nav-menu__submenu {
+            position: absolute;
+
+            left: 100%;
+            top: 0;
+
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: translateX(-20px);
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+        .nav-menu__link:hover + .nav-menu__submenu,
+        .nav-menu__submenu:hover,
+        .nav-menu__submenu:focus-within {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: all;
         }
     }
 }
@@ -292,5 +342,9 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
 
     .burger {
         display: flex;
+    }
+
+    .mobile-navbar {
+        display: block;
     }
 }
