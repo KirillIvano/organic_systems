@@ -1,0 +1,138 @@
+---
+permalink: /product/semi-permament/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+{% from "macro/video.njk" import ytVideo %}
+
+{% block content %}
+    {{ 
+        banner(
+            heading='Полуперманентный краситель для волос без PPD и PTD.',
+            subheading='Идеально подходит для цветных хамелеонов или модных образов.',
+            content='Естественно питательные от пастельных тонов для ярких и ярких, цвета безграничны.',
+
+            imgAddress='/files/products/semi-permament/intro.webp',
+            theme='dark',
+            removeSubheadingOnShrink=true
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">
+            Окрашивание без границ.
+        </h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            No Limits - это веганские полуперманентные красители для волос без PPD и PTD. В ассортименте 12 смешиваемых цветов, которые выдерживают от 6 до 12 моек. No Limits дает вам свободу создавать индивидуальный цвет волос для ваших клиентов без долгосрочных обязательств. Это самое актуальное решение для временного изменения цвета как натуральных так и окрашенных волос. Благодаря натуральному кондиционирующему составу и богатой белком основе в ассортименте No Limits используются красители прямого действия, поэтому их можно использовать без использования активаторов. No Limits идеально подходит для клиентов, которые не готовы к постоянным изменениям или чувствительны к окислительным пигментам (PPD / PTD / PTDS).
+        </p>
+
+        <p class="text_simple paragraph_padded">
+            Придаёт лёгкий оттенок путём добавления No limits в маску, кондиционер, шампунь и даже краситель, и интенсивный краситель при использовании в чистом виде. Так как оттенки имеют акварельный принцип работы то вы можете смешивать их и получать неограниченные цветовые решения.
+        </p>
+    </div>
+
+    <div class="container_dual">        
+        <div class="container_dual__item container_v-padded container_gray">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Особенности & Преимущества</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">Без PPD и PTD.</li>
+                    <li class="list__item">Питает и кондиционирует волосы во время окрашивания.</li>
+                    <li class="list__item">Кондеционирующая основа богатая протеином.</li>
+                    <li class="list__item">Создавайте индивидуальный цвет без долгосрочных обязательств.</li>
+                    <li class="list__item">Краситель прямого действия.</li>
+                    <li class="list__item">Подходит для веганов.</li>
+                    <li class="list__item">Не содержит глютен.</li>
+                    <li class="list__item">Без аммиака, парабенов или резорцина.</li>
+                    <li class="list__item">12 смешиваемых оттенков (8 супер ярких и 4 натуральных).</li>
+                    <li class="list__item">100% натуральный ароматизатор.</li>
+                    <li class="list__item">Упаковка, подлежащая вторичной переработке.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/products/semi-permament/benefits.webp')"
+        ></div>
+    </div>
+
+
+    <div class="container_v-padded">
+        <div class="container_gray container_v-padded">
+            <div class="container_responsive">
+                <h2 class="heading_main text_centered">No Limits.</h2>
+
+                <div class="products-row mt-6">
+                    <div class="products-row__item">
+                        <div class="product-preview">
+                            <img 
+                                class="product-preview__image"
+                                src="/files/products/semi-permament/range1.webp"
+                                alt=""
+                            >
+
+                            <h3 class="product-preview__name">Палитра супер ярких оттенков.</h3>
+
+                            <hr class="hr_sm hr_dark hr_padded">
+                        </div>
+                    </div>
+
+                    <div class="products-row__item">
+                        <div class="product-preview">
+                            <img 
+                                class="product-preview__image"
+                                src="/files/products/semi-permament/range1.webp"
+                                alt=""
+                            >
+
+                            <h3 class="product-preview__name">Палитра супер ярких оттенков.</h3>
+
+                            <hr class="hr_sm hr_dark hr_padded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ytVideo(
+        'https://www.youtube.com/embed/9IgNoXK-ur4',
+        '/files/products/semi-permament/range.webp'
+    )}}
+
+    <div class="container_dual">       
+        <div class="container_dual__item container_v-padded container_green">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Активные натуральные и органические ингредиенты.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">Пшеничный протеин без глютена - защищает и улучшает блеск / мягкость.</li>
+                    <li class="list__item">Окопник - смягчает, распутывает и придает блеск.</li>
+                    <li class="list__item">Алоэ вера - увлажняет и успокаивает кожу головы.</li>
+                    <li class="list__item">Ромашка - кондиционирует, увлажняет и успокаивает кожу головы.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/products/semi-permament/ingredients.webp')"
+        ></div>
+    </div>
+
+    {% include "parts/emails.njk" %}
+    {% include "parts/actionBanners/revolutionBanner.njk" %}
+
+{% endblock content %}

@@ -1,0 +1,168 @@
+---
+permalink: /product/power-build/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+{% from "macro/video.njk" import ytVideo %}
+
+{% block content %}
+    {{ 
+        banner(
+            heading='Power Build.',
+            subheading='Оранжевый.',
+            content='Для слабых или поврежденных при окрашивании волос.',
+
+            imgAddress='/files/products/power-build/intro.webp',
+            theme='light'
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">
+            Линия средств для восполнения протеина и востановления структуры волос.
+        </h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            Профессиональная линия средств Power Build разработана для придания силы и плотности волосам. В составе Power Build сертифицированные органические экстракты семян подсолнечника, лимона, яблока, зеленого чая, натуральный белок пшеницы, витамин В5, которые делают волосы сильными и объемными.
+        </p>
+        <p class="text_simple paragraph_padded">
+            Power Build восстанавливает сияние волос, делает их послушными, увеличивает стойкость цвета и предотвращает ломкость. Не содержит SLS, SLES и хлорида натрия. Подхоодит для веганов. Содержит 100% натуральный аромат чёрной малины и ванили.
+        </p>
+
+        <div class="products-row mt-6">
+            <div class="products-row__item">
+                <div class="product-preview">
+                    <img 
+                        class="product-preview__image"
+                        src="/files/products/power-build/product1.webp"
+                        alt=""
+                    >
+
+                    <h3 class="product-preview__name">Power Build Shampoo 70ml, 250ml, 900ml</h3>
+
+                    <hr class="hr_sm hr_dark hr_padded">
+                </div>
+            </div>
+
+            <div class="products-row__item">
+                <div class="product-preview">
+                    <img 
+                        class="product-preview__image"
+                        src="/files/products/power-build/product2.webp"
+                        alt=""
+                    >
+
+                    <h3 class="product-preview__name">Power Build Treatment 90ml, 500ml & Revamp 75ml, 150ml, 900ml</h3>
+
+                    <hr class="hr_sm hr_dark hr_padded">
+                </div>
+            </div>
+
+            <div class="products-row__item">
+                <div class="product-preview">
+                    <img 
+                        class="product-preview__image"
+                        src="/files/products/power-build/product3.webp"
+                        alt=""
+                    >
+
+                    <h3 class="product-preview__name">Power Build Conditioner 70ml, 250ml, 900ml</h3>
+
+                    <hr class="hr_sm hr_dark hr_padded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container_dual">       
+        <div class="container_dual__item container_v-padded container_green">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Активные натуральные и органические ингредиенты.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">Окопник - успокаивает, защищает и увлажняет.</li>
+                    <li class="list__item">Алоэ Вера -  увлажняет и успокаивает кожу головы.</li>
+                    <li class="list__item">Ромашка - кондиционирующие и противовоспалительные свойства.</li>
+                    <li class="list__item">Подсолнечное масло - кондиционер.</li>
+                    <li class="list__item">Лимонный сок - антиоксидант.</li>
+                    <li class="list__item">Лист зеленого чая - антиоксидант.</li>
+                    <li class="list__item">Пшеничный протеин, не содержащий глютена - удерживает влагу в структуре волоса и придает им зеркальный блеск.</li>
+                    <li class="list__item">Масло сладкого миндаля - кондиционированиеи блеск.</li>
+                    <li class="list__item">Киноа - белок растительного происхождения, глубокое восстановление структуры волоса.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/products/aqua-boost/features.webp')"
+        ></div>
+    </div>
+
+
+    <div class="container_dual">       
+        <div class="container_dual__item container_v-padded container_gray">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Когда использовать Power Build®.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <h3 class="heading_secondary">
+                    Для волос, которые растягиваются, но не возвращаются в исходное положение.
+                </h3>
+
+                <p class="text_simple paragraph_padded">
+                    Наш тест на эластичность - идеальный способ проанализировать волосы ваших клиентов и определить, какие продукты по уходу следует использовать для наилучшего восстановления и окрашивания волос. Познакомьтесь с результатом теста на эластичность в данном видео.
+                </p>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item container_v-padded container_gray"
+        >
+            <div class="padded-content_right container_full-height container_v-centered">
+                {{ytVideo(
+                    'https://www.youtube.com/embed/ltwcJLISq-I?list=PLAcn_xZjDIOHivAjSJUEHOrcBBCgUgjVJ',
+                    '/files/products/aqua-boost/yt-preview.webp'
+                )}}
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image"
+                src="/files/products/whole-range.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_dark">
+                <h2 class="heading_main">Посмотрите весь ассортимент.</h2>
+                
+                <hr class="banner__delimiter hr_padded hr_sm hr_dark">
+
+                <a
+                    href="/products"
+                    class="button button_link button_dark"
+                >
+                    Подробнее.
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {% include "parts/actionBanners/revolutionBanner.njk" %}
+
+{% endblock content %}
