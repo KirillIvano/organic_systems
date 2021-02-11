@@ -1,0 +1,59 @@
+@import "~vars/colors";
+@import "~vars/pads";
+@import "~vars/fonts";
+
+.button {
+    min-width: 120px;
+    width: max-content;
+    padding: $pad2 $pad5;
+
+    background: transparent;
+    border: 1px solid $black;
+
+    text-align: center;
+    color: $black;
+    font-family: $font_secondary;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button_dark {
+    border-color: $black;
+    color: $black;
+
+    &:hover,
+    &:focus {
+        background: $black;
+        color: $white;
+    }
+}
+
+.button_link {
+    display: block;
+}
+
+.button_light {
+    border-color: $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background: $white;
+        color: $black;
+    }
+}
+
+.button:disabled {
+    background: $light_gray;
+    color: $black;
+}

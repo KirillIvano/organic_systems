@@ -1,0 +1,230 @@
+---
+permalink: /products/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+
+
+{% block content %}  
+    {{ 
+        banner(
+            heading='Наш Ассортимент.',
+            subheading='Цвет, уход, создание и стиль.',
+            content='Откройте для себя наш полный ассортимент натуральных продуктов для волос.',
+
+            imgAddress='/files/products/our-range.webp',
+            theme='dark'
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">Система.</h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            Organic Color Systems - это именно такая система. Наши продукты, разработанные для работы с оптимальным уровнем pH для волос, которые гармонично сочетаются друг с другом, чтобы подарить вашим клиентам красивый цвет волос без повреждений. С помощью наших натуральных средств по уходу вы восстановите даже самые повреждённые волосы. Создавайте красивый цвет с помощью нашей линейки стойких красителей , не повреждающих их, и линейки полуперманентных красок , не содержащих PPD и PTD.
+        </p>
+        <p class="text_simple paragraph_padded">
+            Откройте для себя лучшую цветовую политру.
+        </p>
+    </div>
+
+
+    <div class="banner product-banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image lazy-img"
+                data-src="/files/products/perm-hair-color.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_light">
+                <h2 class="banner__heading heading_main product-banner__heading">Перманентный цвет волос.</h2>
+                
+                <hr class="banner__delimiter hr_sm hr_light">
+
+                <p class="banner__heading product-banner__text">
+                    Веганский, безвредный и без аммиака.
+                </p>
+
+                <a
+                    href="/product/perm-color"
+                    class="banner__link button button_link  button_light"
+                >
+                    Покажи мне больше.
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner product-banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image lazy-img"
+                data-src="/files/products/semi-permament.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_dark">
+                <h2 class="banner__heading heading_main product-banner__heading">Полуперманентная краска для волос.</h2>
+                
+                <hr class="banner__delimiter hr_sm hr_dark">
+
+                <p class="heading_main product-banner__text">
+                    PPD и PTD Free Color.
+                </p>
+
+                <a
+                    href="/product/semi-permament"
+                    class="banner__link button button_link button_dark"
+                >
+                    Покажи мне больше.
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner product-banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image lazy-img"
+                data-src="/files/products/hair-cure.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_light">
+                <h2 class="banner__heading heading_main product-banner__heading">Уход за волосами.</h2>
+                
+                <hr class="banner__delimiter hr_sm hr_light">
+
+                <p class="banner__heading heading_main product-banner__text">
+                    Детокс, питание и восстановление баланса.
+                </p>
+
+                <a
+                    href="/product/care-range"
+                    class="banner__link button button_link button_light"
+                >
+                    Покажи мне больше.
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner product-banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image lazy-img"
+                data-src="/files/products/hair-styling.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_dark">
+                <h2 class="banner__heading heading_main product-banner__heading">Прическа.</h2>
+                
+                <hr class="banner__delimiter hr_sm hr_dark">
+
+                <p class="banner__heading heading_main product-banner__text">
+                    Безупречный контроль над волосами.
+                </p>
+
+                <a
+                    href="/product/control-styling"
+                    class="banner__link button button_link button_dark"
+                >
+                    Покажи мне больше.
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner product-banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image lazy-img"
+                data-src="/files/products/think-curl.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_light">
+                <h2 class="banner__heading heading_main product-banner__heading">Система завивки Think Curl ™.</h2>
+                
+                <hr class="banner__delimiter hr_sm hr_light">
+
+                <p class="banner__heading heading_main product-banner__text">
+                    Кудри вернулись.
+                </p>
+
+                <a
+                    href="/product/think-curl"
+                    class="banner__link button button_link button_light"
+                >
+                    Покажи мне больше.
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container_v-padded"></div>
+
+
+    <div
+        style="background-image: url('/files/about/workshops.webp')"
+        class="container_v-padded container_image-backgrounded"
+    >
+        <div class="container_responsive">
+            <div class="container_boxed container_v-padded text_centered">
+                <h2 class="heading_main">
+                    Учитесь у нас.
+                </h2>
+
+                <hr class="hr_sm hr_padded hr_centered">
+
+                <h3 class="heading_secondary">
+                    Узнайте больше о том, как работают наши продукты.
+                </h3>
+
+                <p class="text_simple paragraph_padded">
+                    Запишитесь на наш базовый семинар прямо сейчас
+                </p>
+
+                <div class="container_centered mt-3">
+                    <a
+                        href="/education/fundamental"
+                        class="button button_link banner__link banner__link button_dark"
+                    >
+                        Записаться сейчас.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

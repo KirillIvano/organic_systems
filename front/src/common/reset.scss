@@ -1,0 +1,57 @@
+@import "~vars/pads";
+@import "~vars/fonts";
+@import "~vars/colors";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+button,
+input {
+    border: none;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: $font_primary;
+    overflow-x: hidden;
+}
+
+hr {
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $white;
+}

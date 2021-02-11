@@ -1,0 +1,29 @@
+@import "~vars/screens";
+@import "~vars/pads";
+
+.product-banner {
+    margin-top: $pad1;
+
+    .product-banner__heading,
+    .product-banner__text {
+        margin-top: $pad4;
+        margin-bottom: $pad4;
+
+        line-height: 1;
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .product-banner {
+
+        .product-banner__heading {
+            margin-top: $pad2;
+            margin-bottom: $pad2;
+        }
+
+        .product-banner__text {
+            display: none;
+        }
+    }
+}
+

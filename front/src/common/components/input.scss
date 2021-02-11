@@ -1,0 +1,13 @@
+@import "~vars/colors";
+@import "~vars/pads";
+@import "~vars/fonts";
+
+.input {
+    display: block;
+    padding: $pad2 $pad4;
+
+    font-family: $font_secondary;
+    font-size: 0.8rem;
+
+    background: $white;
+}

@@ -1,0 +1,23 @@
+@import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/screens";
+@import "~vars/pads";
+
+
+.emails {
+    padding-bottom: $pad4;
+    padding-top: $pad4;
+
+    background: $black;
+    color: white;
+    font-family: $font_primary;
+    font-size: $font_xxl;
+    text-align: center;
+}
+
+
+@media all and (max-width: $screen_sm) {
+    .emails {
+        font-size: $font_lg;
+    }
+}

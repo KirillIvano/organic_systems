@@ -1,0 +1,115 @@
+---
+permalink: /about/our-science/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+
+{% block content %}
+    {{ 
+        banner(
+            heading='Наша уникальная система.',
+            subheading='Революционная, высокопроизводительная и зелёная.',
+
+            imgAddress='/files/about/our-science.webp',
+            theme='light',
+
+            linkText='К продукции',
+            linkAddress='/range',
+            removeSubheadingOnShrink=true
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">
+            Уникальный и экологичный способ работы.
+        </h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            Organic Colour Systems действительно «система». Предназначенные для работы при оптимальных уровнях pH, наши средства для волос гармонично взаимодействуют друг с другом для создания прекрасного цвета волос бех повреждения.
+        </p>
+
+        <p class="text_simple paragraph_padded">
+            Наша дерматологически протестированная и запатентованная формула перманентного красителя для волос содержит минимально возможные уровни окислительного пигмента (PPD / PTD) и содержит высококачественные, натуральные и сертифицированные органические ингредиенты. Наш стойкий краситель работает при более низком уровне pH, чем традиционные химические красители, а это означает, что волосы не повреждаются. Система поддерживается нашим ведущим в своем классе ассортиментом средств по уходу за волосами , которые восстанавливают здоровье волос ваших клиентов еще до того, как вы начнете окрашивать, а затем восстанавливают баланс и закрывают кутикулу волос после окрашивания.
+        </p>
+    </div>
+
+    <div class="container_dual">
+        <div class="container_dual__item container_v-padded container_green">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Особенности системы.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">
+                        95% натуральных и 60% сертифицированных органических ингредиентов.
+                    </li>
+                    <li class="list__item">
+                        64 смешиваемых перманентных и полуперманентных оттенков.
+                    </li>
+                    <li class="list__item">
+                        12 полуперманентных красителей прямого действия без PPD и PTD .
+                    </li>
+                    <li class="list__item">
+                        Протестированная дерматологами и запатентованная формула стойкого красителя для волос .
+                    </li>
+                    <li class="list__item">
+                        Продукты для окрашивания, ухода и стайлинга, подходящие для веганов.
+                    </li>
+                    <li class="list__item">
+                        Создан для гармоничного сочетания с биологией и структурой волос.
+                    </li>
+                    <li class="list__item">
+                        Не содержит аммиака, парабенов, резорцина, глютена и ГМО.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/about/sproute.webp')"
+        ></div>
+    </div>
+
+    <div class="container_dual">        
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/about/aloe.webp')"
+        ></div>
+
+        <div class="container_dual__item container_v-padded container_green">
+            <div class="padded-content_right">
+                <h2 class="heading_main">Преимущества системы.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">Этичное производство.</li>
+                    <li class="list__item">Качество и безопасность.</li>
+                    <li class="list__item">Комфортное использование.</li>
+                    <li class="list__item">Максимальная гипоаллергенность.</li>
+                    <li class="list__item">Экономичный расход.</li>
+                    <li class="list__item">Накопительный эффект.</li>
+                    <li class="list__item">Более здоровая атмосфера салона.</li>
+                    <li class="list__item">Выделяйтесь среди конкурентов.</li>
+                    <li class="list__item">Привлекайте новые аудитории клиентов.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_responsive container_v-padded text_centered">
+        <p class="heading_secondary">
+            «Система», разработанная для гармоничной работы с биологией и структурой волос.
+        </p>
+    </div>
+
+    {% include "parts/actionBanners/allActions.njk" %}
+
+{% endblock content %}

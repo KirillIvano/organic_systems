@@ -1,0 +1,44 @@
+@import "~vars/fonts";
+@import "~vars/pads";
+@import "~vars/screens";
+
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .products-row__item {
+        flex: 0 0 200px;
+
+        padding-left: $pad4;
+        padding-right: $pad4;
+    }
+}
+
+
+.product-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    .product-preview__image {
+        height: 260px;
+        width: auto;
+    }
+
+    .product-preview__name {
+        font-size: $font_xl;
+        font-weight: normal;
+        font-family: $font_primary;
+    }
+}
+
+
+@media all and (max-width: $screen_md) {
+    .products-row {
+        flex-direction: row;
+        align-items: center;
+    }
+}
