@@ -1,5 +1,5 @@
 GET {{host}}/adCampaigns
-Accept: application/json
+Accept: json
 # {"data": [
 #    {
 #      "id": 1,
@@ -12,3 +12,18 @@ Accept: application/json
 #      "fontColor": "dark"/"light"
 #    }
 # ]}
+
+###
+GET {{host}}/workshops
+Accept: json
+# { "data": {
+#    "workshops": [
+#      {
+#        "id": 1,
+#        "title": "Воркшоп 1",
+#        "description": "Вот такой вот воркшоп",
+#        "url": ""
+#      }
+#    ]
+#  }
+# }

@@ -67,15 +67,17 @@ class AdCampaign(Model):
 
 
 class Workshop(Model):
+    class Meta:
+        verbose_name = 'Воркшоп'
+        verbose_name_plural = 'Воркшопы'
+
+    def __str__(self):
+        return self.title
+
     id = AutoField(primary_key=True)
     title = CharField("Название", max_length=255)
     description = TextField("Описание")
-
-
-class Event(Model):
-    id = AutoField(primary_key=True)
-    workshop = ForeignKey(Workshop, verbose_name="Воркшоп", on_delete=CASCADE)
-    datetime = DateTimeField("Дата и время")
+    url = URLField("Ссылка на регистрацию")
 
 
 class BlogCategory(Model):

@@ -6,3 +6,8 @@ from app.models import *
 class AdCampaigns(admin.ModelAdmin):
     pass
 
+
+@admin.register(Workshop)
+class Workshop(admin.ModelAdmin):
+    pass
+
