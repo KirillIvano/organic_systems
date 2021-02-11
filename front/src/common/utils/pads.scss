@@ -1,5 +1,0 @@
-@for $i from 0 through 16 {
-    .m-#{$i} { margin: 0.25rem * $i; }
-    .ml-#{$i} { margin-left: 0.25rem * $i; }
-    .mt-#{$i} { margin-top: 0.25rem * $i; }
-}
