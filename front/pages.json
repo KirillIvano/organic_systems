@@ -67,6 +67,11 @@
         "products/status-quo": {
             "chunks": ["common", "products/careRangeProduct"],
             "template": "/product/status-quo/index.html"
+        },
+        "workshops": {
+            "chunks": ["common"],
+            "template": "/product/status-quo/index.html",
+            "parametrised": true
         }
     },
     "chunks": {

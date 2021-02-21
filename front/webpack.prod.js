@@ -11,15 +11,6 @@ const getProdSpecificConfig = () => ({
     mode: 'production',
     devtool: false,
     optimization: {
-        // splitChunks: {
-        //     cacheGroups: {
-        //         common: {
-        //             test: /[\\/]src[\\/]common/,
-        //             name: 'common',
-        //             chunks: 'all',
-        //         },
-        //     },
-        // },
         minimizer: [
             new TerserJs(),
             new CssMinimizer(),

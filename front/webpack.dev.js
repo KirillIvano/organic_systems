@@ -22,10 +22,6 @@ const findInvalidChunk = (names, chunks) =>
 
 
 const digestPagesConfig = pagesConfig => {
-    // if (!devConfig || (!devConfig.included && !devConfig.mask)) {
-    //     return pagesConfig;
-    // }
-
     const {pages, chunks} = pagesConfig;
 
     const maskRegexp = devConfig.mask && new RegExp(devConfig.mask.replace(/\*/g, '[\\s\\S]*'));

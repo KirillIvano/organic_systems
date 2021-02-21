@@ -7,7 +7,8 @@
         "webpack-dev": "webpack serve --config ./webpack.dev.js",
         "elev-dev": "eleventy --watch",
         "prod": "node --max-old-space-size=4096 ./node_modules/webpack-cli/bin/cli.js --config ./webpack.prod.js",
-        "add-img": "node ./cli/img-add.js"
+        "add-img": "node ./cli/img-add.js",
+        "deploy": "node ./cli/deploy.js"
     },
     "author": "",
     "license": "ISC",
@@ -27,6 +28,7 @@
         "css-minimizer-webpack-plugin": "^1.1.5",
         "eslint": "^7.15.0",
         "file-loader": "^6.2.0",
+        "glob-all": "^3.2.1",
         "html-webpack-plugin": "^5.0.0-beta.1",
         "imagemin": "^7.0.1",
         "imagemin-gifsicle": "^7.0.0",
@@ -44,6 +46,7 @@
         "sass": "^1.30.0",
         "sass-loader": "^10.1.0",
         "sharp": "^0.27.0",
+        "ssh2-sftp-client": "^6.0.1",
         "style-loader": "^2.0.0",
         "stylelint": "^13.8.0",
         "stylelint-config-standard": "^20.0.0",
