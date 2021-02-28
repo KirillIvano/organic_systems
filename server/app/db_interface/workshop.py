@@ -1,4 +1,4 @@
-from app.models import Workshop, WorkshopTutor
+from app.models.models import Workshop, WorkshopTutor
 from app.db_interface import tools
 
 WORKSHOP_PREVIEW_FIELDS = (
@@ -13,6 +13,7 @@ WORKSHOP_FIELDS = (
     ('description', 'description'),
     ('banner_heading', 'bannerHeading'),
     ('banner_background', 'bannerImage'),
+    ('banner_background_color', 'bannerTheme'),
     ('banner_subheading', 'bannerSubHeading'),
     ('banner_text', 'bannerText'),
 )

@@ -1,7 +1,9 @@
 from django.db.models import *
+from django.core.management import call_command
+from .colors import COLOR_CHOICES
 import helpers.random_hash
-import helpers.download_image
-from organicsystems import settings
+import helpers.images
+# from organicsystems import settings
 
 
 def save_model_with_photo(
@@ -13,10 +15,11 @@ def save_model_with_photo(
     if url:
         model.__setattr__(
             file_field,
-            helpers.download_image.save_photo(url, settings.IMAGE_URL)
+            helpers.images.download_image_from_source(url)
         )
         model.__setattr__(url_field, None)
 
+    call_command('collectstatic', verbosity=0, interactive=False)
 
 
 class AdCampaign(Model):
@@ -49,7 +52,7 @@ class AdCampaign(Model):
     )
     background = ImageField(
         verbose_name='Фон',
-        upload_to=helpers.random_hash.hash_filename,
+        upload_to=helpers.images.create_image_path,
         null=True, blank=True
     )
     font_color = CharField(
@@ -85,13 +88,18 @@ class Workshop(Model):
     url = URLField("Ссылка на регистрацию")
     banner_background = ImageField(
         verbose_name='Фон',
-        upload_to=helpers.random_hash.hash_filename,
+        upload_to=helpers.images.create_image_path,
         null=True, blank=True
     )
     banner_background_url = CharField(
         verbose_name='Ссылка на фон',
         max_length=511,
         blank=True, null=True
+    )
+    banner_background_color = CharField(
+        "Цвет фона",
+        max_length=64,
+        choices=COLOR_CHOICES,
     )
     banner_heading = CharField(
         verbose_name="Заголовок",
@@ -145,7 +153,7 @@ class WorkshopTutor(Model):
     )
     image = ImageField(
         verbose_name="Фото",
-        upload_to=helpers.random_hash.hash_filename,
+        upload_to=helpers.images.create_image_path,
         blank=True, null=True
     )
     image_url = CharField(

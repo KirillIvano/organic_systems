@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import *
+from app.models.models import *
 
 
 @admin.register(AdCampaign)
@@ -33,6 +33,7 @@ class WorkshopAdmin(admin.ModelAdmin):
             'fields': (
                 'banner_background',
                 'banner_background_url',
+                'banner_background_color',
                 'banner_heading',
                 'banner_subheading',
                 'banner_text',

@@ -40,7 +40,7 @@ Accept: json
 client.test("Request executed successfully", function() {
   client.assert(response.status === 200, "Response status is not 200");
 });
-%}w
+%}
 
 
 ###
@@ -55,7 +55,7 @@ client.test("Request executed successfully", function() {
 
 
 ###
-GET {{host}}/workshop/2
+GET {{host}}/workshop/3
 Accept: json
 #{
 #  "data": {

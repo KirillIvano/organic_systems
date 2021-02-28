@@ -1,4 +1,4 @@
-from app.models import AdCampaign
+from app.models.models import AdCampaign
 from app.db_interface import tools
 
 AD_CAMPAIGN_FIELDS = (
