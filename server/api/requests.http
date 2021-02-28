@@ -1,5 +1,6 @@
 GET {{host}}/adCampaigns
 Accept: json
+
 # {"data": [
 #    {
 #      "id": 1,
@@ -13,17 +14,75 @@ Accept: json
 #    }
 # ]}
 
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
 ###
 GET {{host}}/workshops
 Accept: json
-# { "data": {
-#    "workshops": [
+# {"data": {"workshops": [1]}}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+
+###
+POST {{host}}/forms/newsletter
+Accept: json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}w
+
+
+###
+POST {{host}}/forms/feedback
+Accept: json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+
+###
+GET {{host}}/workshop/2
+Accept: json
+#{
+#  "data": {
+#    "id": 1,
+#    "title": "Воркшоп 1",
+#    "description": "Вот такой вот воркшоп",
+#    "bannerHeading": "Заголовок",
+#    "bannerSubHeading": "Подзаголовок",
+#    "bannerText": "Текст",
+#    "tutors": [
 #      {
-#        "id": 1,
-#        "title": "Воркшоп 1",
-#        "description": "Вот такой вот воркшоп",
-#        "url": ""
+#        "name": "Алексей Алексеев",
+#        "image": "static/img/8805c7e09d5f563ab5d68406b286bc2f.jpeg",
+#        "info": "Информация"
+#      },
+#      {
+#        "name": "Петр Петров",
+#        "image": "static/img/30a6bc94ce7e23deb757226126125507.JPG",
+#        "info": "Информация"
 #      }
 #    ]
 #  }
-# }
+#}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+

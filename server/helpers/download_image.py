@@ -9,7 +9,7 @@ def save_photo(image_url, images_url):
     filename = images_url + random_hash.hash_string() + extension
     r.raw.decode_content = True
 
-    with open('.' + filename, 'wb+') as f:
+    with open('./' + filename, 'wb+') as f:
         shutil.copyfileobj(r.raw, f)
 
     return filename

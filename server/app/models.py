@@ -18,10 +18,11 @@ def save_model_with_photo(
         model.__setattr__(url_field, None)
 
 
+
 class AdCampaign(Model):
     class Meta:
-        verbose_name = 'Баннер'
-        verbose_name_plural = 'Баннеры'
+        verbose_name = 'Рекламный баннер'
+        verbose_name_plural = 'Рекламные баннеры'
 
     def __str__(self):
         return self.title
@@ -75,22 +76,84 @@ class Workshop(Model):
         return self.title
 
     id = AutoField(primary_key=True)
+    hash = CharField(
+        max_length=32,
+        default=helpers.random_hash.hash_string
+    )
     title = CharField("Название", max_length=255)
     description = TextField("Описание")
     url = URLField("Ссылка на регистрацию")
-
-
-class BlogCategory(Model):
-    id = AutoField(primary_key=True)
-    title = CharField("Название", max_length=255)
-
-
-class Article(Model):
-    id = AutoField(primary_key=True)
-    blogCategory = ForeignKey(
-        BlogCategory,
-        verbose_name="Категория блога",
-        on_delete=PROTECT
+    banner_background = ImageField(
+        verbose_name='Фон',
+        upload_to=helpers.random_hash.hash_filename,
+        null=True, blank=True
     )
-    title = CharField("Название", max_length=255)
-    date = DateField("Дата")
+    banner_background_url = CharField(
+        verbose_name='Ссылка на фон',
+        max_length=511,
+        blank=True, null=True
+    )
+    banner_heading = CharField(
+        verbose_name="Заголовок",
+        max_length=511
+    )
+    banner_subheading = CharField(
+        verbose_name="Подзаголовок",
+        max_length=511
+    )
+    banner_text = TextField(
+        verbose_name="Текст"
+    )
+    tutor = ManyToManyField(
+        verbose_name="Преподаватели",
+        to="WorkshopTutor"
+    )
+
+    def save(self, *a, **kw):
+        save_model_with_photo(self, 'banner_background_url', 'banner_background')
+        super().save(*a, **kw)
+
+
+class WorkshopTutor(Model):
+    class Meta:
+        verbose_name = "Преподаватель"
+        verbose_name_plural = "Преподаватели"
+
+    def __str__(self):
+        return self.fullname
+
+    @property
+    def fullname(self):
+        return f"{self.firstname} {self.lastname}"
+
+    id = AutoField(primary_key=True)
+    hash = CharField(
+        max_length=32,
+        default=helpers.random_hash.hash_string
+    )
+    firstname = CharField(
+        verbose_name="Имя",
+        max_length=511
+    )
+    lastname = CharField(
+        verbose_name="Фамилия",
+        max_length=511
+    )
+
+    info = TextField(
+        verbose_name="Информация"
+    )
+    image = ImageField(
+        verbose_name="Фото",
+        upload_to=helpers.random_hash.hash_filename,
+        blank=True, null=True
+    )
+    image_url = CharField(
+        verbose_name='Ссылка на фото',
+        max_length=511,
+        blank=True, null=True
+    )
+
+    def save(self, *a, **kw):
+        save_model_with_photo(self, 'image_url', 'image')
+        super().save(*a, **kw)
