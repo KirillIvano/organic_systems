@@ -1,0 +1,118 @@
+---
+permalink: /product/charcoal/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+{% from "macro/video.njk" import ytVideo %}
+
+{% block content %}
+    {{ 
+        banner(
+            heading='Новый угольный шампунь.',
+            subheading='С активированным углём.',
+            content='В линейке OCS появился новый шампунь!',
+
+            imgAddress='/files/products/charcoal/intro.webp',
+            theme='dark'
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">
+            Представляем угольный шампунь Organic Color Systems.
+        </h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <h3 class="heading_secondary">
+            Очистить. Детоксикация. Обновить.
+        </h3>
+
+        <p class="text_simple paragraph_padded">
+            Добро пожаловать в наш новый шампунь с древесным углем от Organic Color Systems! Наш новый шампунь с древесным углем, содержащий активированный уголь, известный своими детоксифицирующими и поглощающими примеси свойствами, и натуральные экстракты фруктового уксуса для оптимального состояния, станет новым фаворитом салонов!
+        </p>
+        <p class="text_simple paragraph_padded">
+            В рамках нашей миссии всегда поставлять на рынок самые натуральные и органические продукты для волос, мы рады сообщить, что наш новый шампунь с древесным углем содержит 6 сертифицированных органических ингредиентов, 15 ингредиентов естественного происхождения и натуральный ароматизатор.
+        </p>
+        <p class="text_simple paragraph_padded">
+            Посмотрите наше видео о преимуществах ниже!
+        </p>
+    </div>
+
+
+    <div class="container_v-padded container_responsive">
+        {{ytVideo(
+            'https://www.youtube.com/embed/JNiCwSj1dJU',
+            'http://i3.ytimg.com/vi/JNiCwSj1dJU/hqdefault.jpg'
+        )}}
+    </div>
+
+    <div class="container_v-padded container_responsive">       
+        <h2 class="heading_main text_centered">Ключевые особенности и преимущества нового шампуня с древесным углем.</h2>
+    
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <ul class="list list_padded list_marked">
+            <li class="list__item">Содержит 6 сертифицированных органических и 15 натуральных ингредиентов.</li>
+            <li class="list__item">Содержит натуральный ароматизатор китайского красного яблока.</li>
+            <li class="list__item">Обладает мягким и естественным pH 5,5, что делает его идеальным шампунем для первого ухода за волосами *</li>
+            <li class="list__item">Поглощает любые нежелательные масла, грязь и токсины из волос и кожи головы.</li>
+            <li class="list__item">Также доступны в розничном размере</li>
+            <li class="list__item">Не окрашивает волосы</li>
+            <li class="list__item">Выглядит потрясающе</li>
+            <li class="list__item">Можно использовать как шампунь на каждый день</li>
+            <li class="list__item">Отлично подходит для использования после купания</li>
+            <li class="list__item">Натуральное отшелушивающее средство для волос и кожи головы.</li>
+        </ul>
+    </div>
+
+
+    <div class="container_dual">       
+        <div class="container_dual__item container_v-padded container_dark">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Преимущества использования активированного угля.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <h3 class="heading_secondary">
+                    Полностью натуральный мощный ингредиент.
+                </h3>
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">Обладает антибактериальными и антимикробными свойствами.</li>
+                    <li class="list__item">Уравновешивает масло и жирность</li>
+                    <li class="list__item">Мягко отшелушивает, не загрязняя окружающую среду пластиковыми поддонами</li>
+                    <li class="list__item">Очищает волосы и кожу головы.</li>
+                    <li class="list__item">Удаляет кожный жир и омертвевшую кожу</li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/products/charcoal/benefits.webp')"
+        ></div>
+    </div>
+
+
+    <div class="container_v-padded text_centered">
+        <h2 class="heading_main">Станьте салоном.</h2>
+        
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <h3 class="heading_secondary">Начни свое путешествие сегодня.</h3>
+        <p class="text_simple paragraph_padded">Присоединяйтесь к революции.</p>
+        
+        <div class="container_centered mt-3">
+            <a
+                href="https://www.organiccolorsystems.ru/ocs#contact-ocs"
+                class="button button_link button_dark mt-3"
+            >
+                Запишите меня.
+            </a>
+        </div>
+    </div>
+
+{% endblock content %}

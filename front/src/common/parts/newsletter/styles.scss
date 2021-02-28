@@ -1,0 +1,128 @@
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/screens";
+
+.newsletter-section {
+    padding-top: $pad6;
+    padding-bottom: $pad6;
+
+    background: $black;
+    color: $white;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+
+    .newsletter__subscription {
+        display: flex;
+        flex-direction: column;
+
+        width: 50%;
+
+        .newsletter__heading {
+            font-size: $font_lg;
+        }
+
+        .newsletter__info {
+            margin-top: $pad4;
+
+            font-family: $font_secondary;
+            font-size: $font_xs;
+            line-height: 1.5;
+        }
+
+        .newsletter__form {
+            margin-top: $pad4;
+
+            .newsletter__form-content {
+                display: flex;
+                justify-content: flex-start;
+
+                .newsletter__email {
+                    flex: 1 1 auto;
+                }
+
+                .newsletter__submit {
+                    flex: 0 0 120px;
+                    margin-left: $pad1;
+                }
+            }
+
+            .newsletter__error-message,
+            .newsletter__success-message {
+                display: none;
+                margin-top: $pad3;
+                font-family: $font_secondary;
+            }
+
+            .newsletter__error-message {
+                color: $firm_red;
+            }
+
+            .newsletter__success-message {
+                color: $firm_green;
+            }
+        }
+
+        .newsletter__form.success {
+            .newsletter__success-message {
+                display: block;
+            }
+        }
+
+        .newsletter__form.error {
+            .newsletter__error-message {
+                display: block;
+            }
+        }
+    }
+
+
+    .newsletter__social {
+        align-self: flex-end;
+        display: flex;
+
+        .newsletter__social-anchor {
+            margin-left: $pad6;
+            padding: $pad2;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .newsletter__social-icon {
+                width: 32px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $screen_md) {
+    .newsletter {
+        flex-direction: column;
+
+        .newsletter__subscription {
+            width: 100%;
+
+            .newsletter__form {
+                .newsletter__form-content {
+                    flex-direction: column;
+
+                    .newsletter__submit {
+                        flex: auto;
+
+                        margin-left: 0;
+                        margin-top: $pad2;
+                    }
+                }
+            }
+        }
+
+        .newsletter__social {
+            align-self: flex-start;
+            margin-top: $pad8;
+        }
+    }
+}

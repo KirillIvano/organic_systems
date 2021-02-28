@@ -1,0 +1,126 @@
+@import "~vars/pads";
+@import "~vars/screens";
+@import "~vars/colors";
+@import "~vars/fonts";
+
+.banner {
+    position: relative;
+
+    .banner__image-container {
+        position: relative;
+
+        overflow: hidden;
+        display: block;
+
+        width: 100%;
+
+        padding-bottom: 42.1%;
+
+        .banner__image {
+            position: absolute;
+            top: 0;
+
+            width: 100%;
+        }
+    }
+
+    .banner__image-container::after {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background: rgba(124, 114, 114, 0);
+    }
+
+    .banner__content {
+        top: 0;
+        left: 0;
+
+        height: 100%;
+
+        max-width: 480px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .banner__heading {
+        font-size: $font_xxxl;
+    }
+
+    .banner__subheading {
+        margin-top: $pad2;
+
+        font-size: $font_xl;
+        font-style: italic;
+        line-height: 1;
+    }
+
+    .banner__text {
+        margin-top: $pad4;
+        margin-bottom: $pad4;
+
+        font-size: $font_xs;
+        font-family: $font_secondary;
+    }
+
+    .banner__subheading + .banner__link {
+        margin-top: $pad4;
+    }
+}
+
+
+@media all and (max-width: $screen_md) {
+    .banner {
+        .banner__image-container::after {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .banner__content {
+            color: $white;
+        }
+
+        .banner__heading {
+            font-size: $font_xl;
+        }
+
+        .banner__subheading {
+            font-size: $font_lg;
+        }
+
+        .banner__delimiter {
+            background: $white;
+        }
+
+        .banner__text {
+            display: none;
+        }
+
+        .banner__subheading_removable {
+            display: none;
+        }
+
+        .banner__link {
+            color: $white;
+            border-color: $white;
+
+            margin-top: $pad2;
+
+            &:hover,
+            &:focus {
+                background: $white;
+                color: $black;
+            }
+        }
+
+        .banner__subheading_removable + .banner__link {
+            margin-top: $pad6;
+        }
+    }
+}

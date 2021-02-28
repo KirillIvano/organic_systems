@@ -1,0 +1,109 @@
+---
+permalink: /about/our-support/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+
+{% block content %}
+    {{ 
+        banner(
+            heading='Наша поддержка.',
+            subheading='Мы заботимся о создании более здорового салонного бизнеса.',
+
+            imgAddress='/files/about/our-support.webp',
+            theme='light',
+
+            content='Мы поможем вам выбиться из толпы и расширить вашу клиентскую базу',
+
+            linkText='Подписаться',
+            linkAddress='https://www.organiccolorsystems.ru/ocs#contact-ocs',
+            removeSubheadingOnShrink=true
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">
+            Думаете о присоединении к нашему потрясающему сообществу креативных экспресивных и профессиональных стилистов?
+        </h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            Начиная с предварительного разговора и до вашего первого заказа, наша специальная команда готова помочь вам. От отдела по работе с клиентами, до инструкторов для солонов, все мы готовы помочь расширить ваши горизонты, пробудить ваше воображение и обеспечить процветания на вашем новом пути.         
+        </p>
+    </div>
+
+    <div class="container_dual">
+        <div class="container_dual__item container_v-padded container_green">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Особенности системы.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">
+                        95% натуральных и 60% сертифицированных органических ингредиентов.
+                    </li>
+                    <li class="list__item">
+                        64 смешиваемых перманентных и полуперманентных оттенков.
+                    </li>
+                    <li class="list__item">
+                        12 полуперманентных красителей прямого действия без PPD и PTD .
+                    </li>
+                    <li class="list__item">
+                        Протестированная дерматологами и запатентованная формула стойкого красителя для волос .
+                    </li>
+                    <li class="list__item">
+                        Продукты для окрашивания, ухода и стайлинга, подходящие для веганов.
+                    </li>
+                    <li class="list__item">
+                        Создан для гармоничного сочетания с биологией и структурой волос.
+                    </li>
+                    <li class="list__item">
+                        Не содержит аммиака, парабенов, резорцина, глютена и ГМО.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/about/benefits.webp')"
+        ></div>
+    </div>
+
+    <div
+        style="background-image: url('/files/about/workshops.webp')"
+        class="container_v-padded container_image-backgrounded"
+    >
+        <div class="container_responsive">
+            <div class="container_boxed container_v-padded text_centered">
+                <h2 class="heading_main">
+                    Учитесь у нас.
+                </h2>
+
+                <hr class="hr_sm hr_padded hr_centered">
+
+                <h3 class="heading_secondary">
+                    Запишитесь онлайн сейчас и узнайте, что вы можете получить от нашей Системы.
+                </h3>
+
+                <p class="text_simple paragraph_padded">Никогда не останавливайте обучение с нами</p>
+
+                <div class="container_centered mt-3">
+                    <a
+                        href="/education"
+                        class="button button_link button_dark"
+                    >
+                        Подробнее.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "parts/emails.njk" %}
+
+{% endblock content %}

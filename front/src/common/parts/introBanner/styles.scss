@@ -1,0 +1,28 @@
+@import "~vars/fonts";
+@import "~vars/pads";
+@import "~vars/screens";
+
+
+.intro-banner {
+    .intro-banner__heading {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+
+    .intro-banner__subheading {
+        margin-top: $pad4;
+    }
+}
+
+
+@media all and (max-width: $screen_md) {
+    .intro-banner {
+        .intro-banner__heading {
+            font-size: 1.5rem;
+        }
+
+        .intro-banner__subheading {
+            margin-top: $pad2;
+        }
+    }
+}

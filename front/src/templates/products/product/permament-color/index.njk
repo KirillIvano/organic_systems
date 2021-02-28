@@ -1,0 +1,100 @@
+---
+permalink: /product/permament-color/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/introBanner.njk" import banner %}
+
+{% block content %}
+    {{ 
+        banner(
+            heading='Перманентный Краситель.',
+            subheading='Мы предлагаем Вам и Вашим клиентам дышать чистым воздухом',
+
+            imgAddress='/files/products/perm-hair/intro.webp',
+            theme='dark'
+        ) 
+    }}
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">
+            Уникальный и экологичный способ работы.{{'//TODO'}}
+        </h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            Organic Colour Systems действительно «система». Предназначенные для работы при оптимальных уровнях pH, наши средства для волос гармонично взаимодействуют друг с другом для создания прекрасного цвета волос бех повреждения.
+        </p>
+
+        <p class="text_simple paragraph_padded">
+            Наша дерматологически протестированная и запатентованная формула перманентного красителя для волос содержит минимально возможные уровни окислительного пигмента (PPD / PTD) и содержит высококачественные, натуральные и сертифицированные органические ингредиенты. Наш стойкий краситель работает при более низком уровне pH, чем традиционные химические красители, а это означает, что волосы не повреждаются. Система поддерживается нашим ведущим в своем классе ассортиментом средств по уходу за волосами , которые восстанавливают здоровье волос ваших клиентов еще до того, как вы начнете окрашивать, а затем восстанавливают баланс и закрывают кутикулу волос после окрашивания.
+        </p>
+    </div>
+
+    <div class="container_dual">        
+        <div class="container_dual__item container_v-padded container_gray">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Особенности & Преимущества</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">95% натуральных компонентов.</li>
+                    <li class="list__item">60% органически сертифицированных компанентов.</li>
+                    <li class="list__item">100% закрашивания седины.</li>
+                    <li class="list__item">Моментальный видимый результат.</li>
+                    <li class="list__item">Держится до четырёх недель при условии правильного домашнего ухода.</li>
+                    <li class="list__item">Защита и поддержание целостности волос.</li>
+                    <li class="list__item">Без истощения волос.</li>
+                    <li class="list__item">Без аммиака, запаха и токсичных паров.</li>
+                    <li class="list__item">Без резорцина.</li>
+                    <li class="list__item">Без глютена и ГМО.</li>
+                    <li class="list__item">Самый низкий уровень пигментов PPD в мире (0.06%).</li>
+                    <li class="list__item">Без пятен на коже.</li>
+                    <li class="list__item">Не тестируется на животных.</li>
+                    <li class="list__item">Накопительный эффект.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/products/perm-hair/benefits.webp')"
+        ></div>
+    </div>
+
+
+    <div class="container_v-padded"></div>
+
+
+    <div class="container_dual">       
+        <div class="container_dual__item container_v-padded container_green">
+            <div class="padded-content_left">
+                <h2 class="heading_main">Активные натуральные и органические ингредиенты.</h2>
+            
+                <hr class="hr_sm hr_padded">
+
+                <ul class="list list_padded list_marked">
+                    <li class="list__item">Пшеничный протеин без глютена - защищает, улучшает блеск и мягкость.</li>
+                    <li class="list__item">Окопник - смягчает, распутывает и придает блеск.</li>
+                    <li class="list__item">Алоэ вера - увлажняет и успокаивает кожу головы.</li>
+                    <li class="list__item">Апельсин - укрепляет и помогает сохранить цвет.</li>
+                    <li class="list__item">Грейпфрут - способствует сохранению цвета.</li>
+                    <li class="list__item">Натуральный PEG-2 SOYAMINE - смягчает кутикулу, открывая ее при гораздо более низком pH, чем у аммиака.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div 
+            aria-hidden="true"
+            class="container_dual__item featured_image-backgrounded"
+            style="background-image: url('/files/products/perm-hair/ingredients.webp')"
+        ></div>
+    </div>
+
+    {% include "parts/emails.njk" %}
+    {% include "parts/actionBanners/allActions.njk" %}
+
+{% endblock content %}
