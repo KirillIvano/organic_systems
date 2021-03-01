@@ -1,5 +1,7 @@
 {
     "included": [
-        "products/status-quo"
-    ]
+        "workshops",
+        "education"
+    ],
+    "mask": "product\/.+"
 }

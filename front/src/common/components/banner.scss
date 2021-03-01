@@ -63,8 +63,11 @@
         line-height: 1;
     }
 
-    .banner__text {
+    .banner__subheading + .banner__text {
         margin-top: $pad4;
+    }
+
+    .banner__text {
         margin-bottom: $pad4;
 
         font-size: $font_xs;

@@ -1,0 +1,70 @@
+---
+permalink: /education/index.html
+---
+
+{% extends "layout/main.njk" %}
+{% from "macro/video.njk" import ytVideo %}
+
+{% block content %}
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">Обучение в органик…</h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            Система обучения органик уже более 20 лет помогает сотням салонов и стилистов по всему миру повысить свой профессионализм и укрепить бизнес. Обучающая программа позволяет получить необходимую информацию, практический опыт и понимание систематического подхода в работе и услуге окрашивания. На семинарах вы узнаете, что мы уделяем большое внимание теме здоровья и состояния волос. Наши технологи познакомят вас с таким понятием как «тест на эластичность», и как по его результатам подобрать правильный уход для конкретного типа волос. Наши семинары состоят из нескольких ступеней: Базовый, Седина, Блонд и Фешн.
+        </p>
+    </div>
+
+    <div class="container_v-padded container_pink">
+        <div class="container_responsive">
+            {{ytVideo(
+                'https://www.youtube.com/embed/TQlARw9dhyk?feature=oembed&autoplay=1',
+                'https://i.ytimg.com/vi/TQlARw9dhyk/sddefault.jpg'
+            )}}
+        </div>
+    </div>
+
+    <div class="container_responsive container_v-padded text_centered">
+        <h2 class="heading_main">Запись на семинар</h2>
+
+        <hr class="hr_sm hr_padded hr_centered">
+
+        <p class="text_simple paragraph_padded">
+            В 2020 году мы перешли в новое для нас пространство для обучения стилистов. Covid-19, по всему миру запустил веяние работы в онлайн пространстве. И мы как компания которая идет в ногу со временем, даем вам возможность дистанционного прохождения программы обучения.
+            Семинары проходят в обучающей студии Органик, а при необходимости дистанционного обучения или карантина вы всегда можете рассчитывать на нашу команду и семинары в онлайн пространстве. Наши менеджеры находятся на постоянной связи, и вы можете всегда обратиться к ним для записи на семинары.
+            Или сделать это самостоятельно по <a class="a" aria-label="Ссылка на запись на семинары" href="https://docs.google.com/forms/d/e/1FAIpQLSfNtP21p4z_NoqRiUkO9x0MTgtwFxsIJCGYbEhGpuanvYHaeg/viewform">ссылке</a>. Также, вы можете обратиться в нашу службу поддержки.
+        </p>
+        
+    </div>
+
+    <div class="banner">
+        <div class="banner__image-container">
+            <img
+                class="banner__image"
+                src="/files/workshops/all.webp"
+                alt=""
+            >
+        </div>
+
+        <div class="banner__overlay"></div>
+        <div class="container_absolutely-responsive">
+            <div class="banner__content container_v-padded text_light">
+                <h2 class="banner__heading heading_main">Другие семинары Органик Колор Системс</h2>
+                
+                <hr class="banner__delimiter hr_padded hr_sm hr_light">
+                
+                <p class="banner__text text_light">Познакомьтесь с остальными ступенями обучающей программы </p>
+
+                <a
+                    href="/products"
+                    class="banner__link button button_link button_light"
+                >
+                    Подробнее.
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {% include "parts/actionBanners/revolutionBanner.njk" %}
+{% endblock content %}

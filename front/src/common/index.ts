@@ -27,3 +27,5 @@ import './utils/focus.scss';
 import './utils/visuallyHidden.scss';
 import './utils/pads.scss';
 import './utils/scroll.scss';
+
+import './bootstrap';

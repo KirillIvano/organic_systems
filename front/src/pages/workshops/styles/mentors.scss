@@ -1,0 +1,55 @@
+@import "~vars/pads";
+@import "~vars/fonts";
+
+.mentors-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .mentors-row__item {
+        width: 230px;
+    }
+
+    .mentors-row__item:not(:first-child) {
+        margin-left: $pad4;
+    }
+}
+
+.mentor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .mentor__picture-container {
+        position: relative;
+
+        width: 230px;
+        height: 230px;
+    }
+
+    .mentor__picture {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        border-radius: 50%;
+    }
+
+    .mentor__name {
+        font-size: $font_xl;
+    }
+
+    .mentor__info {
+        font-size: $font_xs;
+    }
+
+    .mentor__underliner {
+        margin-top: $font_sm;
+    }
+}

@@ -1,4 +1,4 @@
-const {optimizeImage} = require('./../imagesScripts/optimizeImage');
+const {optimizeImage} = require('./../scripts/images/optimizeImage');
 
 
 const PATH_PATTERN = /^(\.\/|\/)?([a-zA-Z0-9_-]+\/)*([a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)?)$/;

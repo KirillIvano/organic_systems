@@ -8,6 +8,7 @@ export class Container {
         this.dependencies.set(key, value);
     }
 
+    // takes class and instantinates it with injected params
     inject = (...injected: symbol[]) =>
         <TClass>(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any

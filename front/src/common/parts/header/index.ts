@@ -1,18 +1,61 @@
 import {Actions} from '@/events';
 import {BusInterface} from '@/services/interfaces/BusInterface';
 import {SERVICES_TYPES} from '@/services/types';
-
-import './styles.scss';
+import {WorkshopPreview} from '@/domain/workshops/types';
 import {CLOSE_NAV, navCloseAction, navOpenAction, OPEN_NAV} from '@/events/ui/actions';
 import {container} from '@/services';
+import {LOAD_WORKSHOPS_SUCCESS} from '@/events/workshops/actions';
 
-class Navbar {
+import './styles.scss';
+
+class DesktopNavbar {
+    private _workshopsNavList: HTMLUListElement;
+
+    constructor(
+        private _bus: BusInterface<Actions>,
+    ) {
+        this._workshopsNavList = document.getElementById('desktop-header__workshops-list') as HTMLUListElement;
+    }
+
+    private getWorkshopNavTemplate = (workshop: WorkshopPreview) => (
+        `
+            <li class="nav-menu__item">
+                <a 
+                    href="/workshops/${workshop.id}.html"
+                    class="nav-menu__link"
+                >
+                    ${workshop.title}
+                </a>
+            </li> 
+        `
+    )
+
+    private renderWorkshopsNav = (workshops: WorkshopPreview[]) => {
+        this._workshopsNavList.insertAdjacentHTML(
+            'afterbegin',
+            workshops
+                .map(w => this.getWorkshopNavTemplate(w))
+                .join(''),
+        );
+    }
+
+    init() {
+        this._bus.subscribe(
+            LOAD_WORKSHOPS_SUCCESS,
+            ({payload: {workshops}}) => this.renderWorkshopsNav(workshops),
+        );
+    }
+}
+
+class MobileNavbar {
     private _navbar: HTMLDivElement;
+    private _workshopsNavList: HTMLUListElement;
 
     constructor(
         private _bus: BusInterface<Actions>,
     ) {
         this._navbar = document.getElementsByClassName('mobile-navbar')[0] as HTMLDivElement;
+        this._workshopsNavList = document.getElementById('mobile-header__workshops-list') as HTMLUListElement;
     }
 
     handleNavbarOpen = () => {
@@ -25,9 +68,36 @@ class Navbar {
         document.body.classList.remove('prevent-scroll');
     }
 
+    getWorkshopNavTemplate = (workshop: WorkshopPreview) => (
+        `
+            <li class="mobile-navbar__list-item">
+                <a 
+                    href="/workshops/${workshop.id}.html"
+                    class="mobile-navbar__link"
+                >
+                    ${workshop.title}
+                </a>
+            </li> 
+        `
+    )
+
+    renderWorkshopsNav = (workshops: WorkshopPreview[]) => {
+        this._workshopsNavList.insertAdjacentHTML(
+            'afterbegin',
+            workshops
+                .map(w => this.getWorkshopNavTemplate(w))
+                .join(''),
+        );
+    }
+
     init() {
         this._bus.subscribe(CLOSE_NAV, this.handleNavbarClose);
         this._bus.subscribe(OPEN_NAV, this.handleNavbarOpen);
+
+        this._bus.subscribe(
+            LOAD_WORKSHOPS_SUCCESS,
+            ({payload: {workshops}}) => this.renderWorkshopsNav(workshops),
+        );
     }
 }
 
@@ -74,9 +144,10 @@ class Header {
     }
 }
 
-
 const header = container.inject(SERVICES_TYPES.ActionsBus)(Header);
-const navbar = container.inject(SERVICES_TYPES.ActionsBus)(Navbar);
+const mobileNavbar = container.inject(SERVICES_TYPES.ActionsBus)(MobileNavbar);
+const desktopNavbar = container.inject(SERVICES_TYPES.ActionsBus)(DesktopNavbar);
 
 header.init();
-navbar.init();
+mobileNavbar.init();
+desktopNavbar.init();

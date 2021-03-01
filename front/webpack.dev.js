@@ -28,13 +28,11 @@ const digestPagesConfig = pagesConfig => {
     const included = devConfig.included;
 
     const filteredEntriesArray = Object.entries(pages).filter(
-        ([name, {template}]) => {
-            return (
-                !(included || maskRegexp) ||
+        ([name, {template}]) => (
+            !(included || maskRegexp) ||
                 (included && included.includes(name)) ||
                 (maskRegexp && maskRegexp.test(template))
-            );
-        },
+        ),
     );
 
     const filteredPages = filteredEntriesArray.reduce(

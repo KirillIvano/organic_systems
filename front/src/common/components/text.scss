@@ -21,6 +21,11 @@
     line-height: 2;
 }
 
+.paragraph_not-padded {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .paragraph_padded {
     margin-top: $pad4;
     margin-bottom: $pad4;

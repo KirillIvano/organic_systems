@@ -52,7 +52,7 @@ export class Video {
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                autoplay
+                autoplay="1"
             ></iframe>
         `);
     }
