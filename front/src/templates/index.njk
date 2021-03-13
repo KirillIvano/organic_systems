@@ -66,8 +66,9 @@ title: Organic Colour Systems
             {% for t in testimonials %}
                 {{
                     testimonial(
-                        t.author_name,
-                        t.description
+                        author_name=t.author_name,
+                        person_info=t.person_info,
+                        text=t.description
                     )
                 }}
             {% endfor %}

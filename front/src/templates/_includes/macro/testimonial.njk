@@ -1,5 +1,6 @@
 {% macro testimonial(
     author_name,
+    person_info,
     text
 ) %}
 <div class="testimonial">
@@ -10,6 +11,10 @@
 
         <p class="testimonial__author-info">
             {{author_name}}
+        </p>
+        
+        <p class="testimonial__company-info">
+            {{person_info}}
         </p>
     </div>
 </div>

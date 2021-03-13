@@ -1,3 +1,5 @@
 {
-    "mask": ".+"
+    "included": [
+        "main"
+    ]
 }

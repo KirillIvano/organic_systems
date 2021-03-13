@@ -34,6 +34,17 @@ $imageSize: 70px;
             font-weight: bold;
             text-transform: uppercase;
         }
+
+        .testimonial__company-info {
+            max-width: 400px;
+
+            margin-top: $pad2;
+
+            line-height: 1.5;
+            font-size: $font_xs;
+            font-family: $font_secondary;
+            text-transform: uppercase;
+        }
     }
 }
 
