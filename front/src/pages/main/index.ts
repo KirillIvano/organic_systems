@@ -1,11 +1,15 @@
-import 'owl.carousel/dist/assets/owl.theme.default.min.css';
-import 'owl.carousel/dist/assets/owl.carousel.min.css';
-import 'owl.carousel/dist/owl.carousel';
+import {createCarousel} from '@/util/owl';
 
+import {createTestimonials} from '@/common/parts/testimonials';
 
-($('.owl-carousel.intro-carousel') as any).owlCarousel({
-    items: 1,
-    autoplay: true,
-    loop: true,
-    dots: false,
-});
+createTestimonials('.owl-carousel.testimonials-carousel');
+
+createCarousel(
+    '.owl-carousel.intro-carousel',
+    {
+        items: 1,
+        autoplay: true,
+        loop: true,
+        dots: false,
+    },
+);

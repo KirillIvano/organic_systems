@@ -21,7 +21,6 @@ import './parts/newsletter';
 import './parts/smallFacts';
 import './parts/emails';
 import './parts/introBanner';
-import './parts/video';
 
 import './utils/focus.scss';
 import './utils/visuallyHidden.scss';

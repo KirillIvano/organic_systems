@@ -4,6 +4,7 @@ title: Organic Colour Systems
 
 {% extends "layout/main.njk" %}
 {% from "macro/introBanner.njk" import banner %}
+{% from "macro/testimonial.njk" import testimonial %}
 
 {% block content %}
     <div class="owl-carousel intro-carousel">
@@ -57,6 +58,19 @@ title: Organic Colour Systems
             >
                 Наша история.
             </a>
+        </div>
+    </div>
+
+    <div class="container_responsive container_v-padded">
+        <div class="owl-carousel testimonials-carousel">
+            {% for t in testimonials %}
+                {{
+                    testimonial(
+                        t.author_name,
+                        t.description
+                    )
+                }}
+            {% endfor %}
         </div>
     </div>
 

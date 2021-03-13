@@ -1,0 +1,16 @@
+{% macro testimonial(
+    author_name,
+    text
+) %}
+<div class="testimonial">
+    <div class="testimonial__content">
+        <p class="testimonial__text">
+            {{text}}
+        </p>
+
+        <p class="testimonial__author-info">
+            {{author_name}}
+        </p>
+    </div>
+</div>
+{% endmacro %}
