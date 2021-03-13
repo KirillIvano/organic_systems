@@ -1,11 +1,11 @@
 {
     "pages": {
         "main": {
-            "chunks": ["main-page", "common"],
+            "chunks": ["common", "main-page"],
             "template": "/index.html"
         },
         "history": {
-            "chunks": ["our-history", "common"],
+            "chunks": ["common"],
             "template": "/about/our-history/index.html"
         },
         "ethics": {
@@ -72,6 +72,10 @@
             "chunks": ["common", "education"],
             "template": "/education/index.html"
         },
+        "tutors": {
+            "chunks": ["common", "workshops", "tutors"],
+            "template": "/tutors/index.html"
+        },
         "workshops": {
             "chunks": ["common", "workshops"],
             "template": "/workshops/",
@@ -88,9 +92,6 @@
         "our-range": {
             "entry": "/pages/products/ourRange/index.ts"
         },
-        "our-history": {
-            "entry": "/pages/about/ourHistory/index.ts"
-        },
         "products-semiPermament": {
             "entry": "/pages/products/semiPermament/index.ts"
         },
@@ -105,6 +106,9 @@
         },
         "education": {
             "entry": "/pages/education/index.ts"
+        },
+        "tutors": {
+            "entry": "/pages/tutors/index.ts"
         }
     }
 }

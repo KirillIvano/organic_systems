@@ -70,6 +70,8 @@
     .banner__text {
         margin-bottom: $pad4;
 
+        line-height: 2;
+
         font-size: $font_xs;
         font-family: $font_secondary;
     }
@@ -99,6 +101,8 @@
 
         .banner__delimiter {
             background: $white;
+            margin-top: $pad2;
+            margin-bottom: $pad2;
         }
 
         .banner__text {

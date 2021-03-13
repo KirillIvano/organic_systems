@@ -3,17 +3,19 @@ export type WorkshopPreview = {
     title: string;
 }
 
+export type Tutor = {
+    name: string;
+    image: string;
+    info: string;
+}
+
 export type Workshop = {
     id: number;
     title: string;
     url: string;
     description: string;
 
-    tutors: Array<{
-        name: string;
-        picture: string;
-        info: string;
-    }>,
+    tutors: Tutor[];
 
     bannerHeading: string;
     bannerSubHeading: string;

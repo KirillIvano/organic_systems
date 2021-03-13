@@ -11,7 +11,7 @@ const fetchWorkshop = (workshopId) =>
         .then(r => r.data);
 
 const clientifyImage = img =>
-    `http://31.31.199.170/${img}`;
+    `http://31.31.199.170/${img.slice(2)}`;
 
 const clientifyTutor = tutor => ({
     ...tutor,

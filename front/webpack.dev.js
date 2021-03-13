@@ -1,3 +1,13 @@
+// {
+//     "included": [
+//         "workshops",
+//         "education",
+//         "tutors"
+//     ],
+//     "mask": "product\/.+"
+// }
+
+
 const {merge} = require('webpack-merge');
 
 const {DIST_PATH, getBaseConfig} = require('./webpack.config');
