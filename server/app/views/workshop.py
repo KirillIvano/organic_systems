@@ -14,5 +14,5 @@ def get(request, workshop_id):
         return wrap_data(
             db_interface.workshop.get(workshop_id)
         )
-    except models.Workshop.DoesNotExist:
+    except models.models.Workshop.DoesNotExist:
         return wrap_error("Нет воркшопа с таким id", 404)

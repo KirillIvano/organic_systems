@@ -97,7 +97,7 @@ class Workshop(Model):
         blank=True, null=True
     )
     banner_background_color = CharField(
-        "Цвет фона",
+        "Цвет текста",
         max_length=64,
         choices=COLOR_CHOICES,
     )
@@ -114,7 +114,8 @@ class Workshop(Model):
     )
     tutor = ManyToManyField(
         verbose_name="Преподаватели",
-        to="WorkshopTutor"
+        to="WorkshopTutor",
+        null=True, blank=True
     )
 
     def save(self, *a, **kw):
@@ -165,3 +166,7 @@ class WorkshopTutor(Model):
     def save(self, *a, **kw):
         save_model_with_photo(self, 'image_url', 'image')
         super().save(*a, **kw)
+
+
+class EmailNewsletterSubscriber(Model):
+    email = EmailField()

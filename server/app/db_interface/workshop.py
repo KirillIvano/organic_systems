@@ -1,5 +1,6 @@
 from app.models.models import Workshop, WorkshopTutor
 from app.db_interface import tools
+from app.db_interface.tutor import TUTOR_FIELDS
 
 WORKSHOP_PREVIEW_FIELDS = (
     ('id', 'id'),
@@ -16,12 +17,6 @@ WORKSHOP_FIELDS = (
     ('banner_background_color', 'bannerTheme'),
     ('banner_subheading', 'bannerSubHeading'),
     ('banner_text', 'bannerText'),
-)
-
-TUTOR_FIELDS = (
-    ('fullname', 'name'),
-    ('image', 'image'),
-    ('info', 'info'),
 )
 
 
