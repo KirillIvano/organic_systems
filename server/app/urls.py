@@ -9,6 +9,7 @@ urlpatterns = [
     path('tutor/all', tutor.get_all),
     # forms
     path('forms/newsletter', forms.newsletter),
+    path('forms/becomeSalon', forms.become_a_salon),
     path('feedback', forms.feedback),
 ]
 

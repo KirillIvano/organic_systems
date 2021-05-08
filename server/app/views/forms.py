@@ -20,3 +20,9 @@ def newsletter(request: HttpRequest):
 def feedback(request: HttpRequest):
     return wrap_data({})
     # todo: форма для обратной связи
+
+
+def become_a_salon(request: HttpRequest):
+    return wrap_data({})
+    # todo: форма для обратной связи
+
