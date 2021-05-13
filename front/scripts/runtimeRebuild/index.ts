@@ -24,12 +24,12 @@ const buildEleventy = () =>
 
 
 const fetchWorkshopsPreviews = () =>
-    fetch('http://31.31.199.170:8000/workshops', {method: 'GET'})
+    fetch('http://80.78.246.194:8000/workshops', {method: 'GET'})
         .then(r => r.json())
         .then(r => r.data.workshops);
 
 const fetchWorkshop = (workshopId) =>
-    fetch(`http://31.31.199.170:8000/workshop/${workshopId}`, {method: 'GET'})
+    fetch(`http://80.78.246.194:8000/workshop/${workshopId}`, {method: 'GET'})
         .then(r => r.json())
         .then(r => r.data);
 

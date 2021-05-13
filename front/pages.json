@@ -17,7 +17,7 @@
             "template": "/about/our-science/index.html"
         },
         "support": {
-            "chunks": ["common"],
+            "chunks": ["common", "our-support"],
             "template": "/about/our-support/index.html"
         },
         "products": {
@@ -76,6 +76,10 @@
             "chunks": ["common", "workshops", "tutors"],
             "template": "/tutors/index.html"
         },
+        "contacts": {
+            "chunks": ["contacts"],
+            "template": "/contacts/index.html"
+        },
         "workshops": {
             "chunks": ["common", "workshops"],
             "template": "/workshops/",
@@ -91,6 +95,9 @@
         },
         "our-range": {
             "entry": "/pages/products/ourRange/index.ts"
+        },
+        "our-support": {
+            "entry": "/pages/about/ourSupport/index.ts"
         },
         "products-semiPermament": {
             "entry": "/pages/products/semiPermament/index.ts"
@@ -109,6 +116,9 @@
         },
         "tutors": {
             "entry": "/pages/tutors/index.ts"
+        },
+        "contacts": {
+            "entry": "/pages/contacts/index.ts"
         }
     }
 }

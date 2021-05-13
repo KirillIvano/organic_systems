@@ -20,6 +20,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: $pad6;
+
     text-align: center;
 
     .mentor__picture-container {
@@ -42,6 +45,8 @@
     }
 
     .mentor__name {
+        $white-space: nowrap;
+        white-space: nowrap;
         font-size: $font_xl;
     }
 

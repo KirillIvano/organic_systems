@@ -8,7 +8,7 @@ $headerContentHeight: 80px;
 
 .header {
     background: black;
-    color: white;
+    color: $white;
     .header__primary-section {
         background: $firm_green;
 
@@ -122,6 +122,7 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
         align-items: stretch;
 
         height: 100%;
+        margin: 0;
 
         .navbar__list-item {
             padding-left: $pad3;
@@ -148,6 +149,8 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
                 height: 100%;
 
                 font-size: $font_xs;
+                color: $white;
+                text-decoration: none;
 
                 transition: color 0.3s ease-in-out;
 
@@ -192,6 +195,9 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
                 opacity: 0;
                 transform: translateX(20px);
 
+                color: $black;
+                text-decoration: none;
+
                 transition:
                     visibility 0.2s ease-in-out,
                     opacity 0.2s ease-in-out,
@@ -225,7 +231,7 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
     padding-top: $pad10;
     padding-bottom: 200px;
 
-    background: white;
+    background: $white;
     font-family: $font_secondary;
 
     transform: translateX(100%);
@@ -236,6 +242,8 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
 
         .mobile-navbar__link {
             display: block;
+
+            text-decoration: none;
         }
 
         .mobile-navbar__list-item {
@@ -259,6 +267,7 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
 
 .nav-menu {
     width: 150px;
+    padding-left: $pad0;
 
     background-color: $white;
 
@@ -274,6 +283,9 @@ $closeScale: 1.41421356237 * (($burgerSize - $burgerLineHeight) / $burgerSize);
 
             display: block;
             padding: $pad2;
+
+            color: $black;
+            text-decoration: none;
 
             transition: color 0.3s ease-in-out;
 

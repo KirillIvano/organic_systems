@@ -85,7 +85,7 @@ const getBaseConfig = pagesConfig => ({
     plugins: [
         new CleanWebpackPlugin(),
         new DefinePlugin({
-            __API_ADDRESS__: '"http://31.31.199.170:8000"',
+            __API_ADDRESS__: '"http://80.78.246.194:8000"',
         }),
         new ProvidePlugin({
             $: 'jquery',

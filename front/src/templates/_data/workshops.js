@@ -1,17 +1,17 @@
 const fetch = require('node-fetch');
 
 const fetchWorkshopsPreviews = () =>
-    fetch('http://31.31.199.170:8000/workshops', {method: 'GET'})
+    fetch('http://80.78.246.194:8000/workshops', {method: 'GET'})
         .then(r => r.json())
         .then(r => r.data.workshops);
 
 const fetchWorkshop = (workshopId) =>
-    fetch(`http://31.31.199.170:8000/workshop/${workshopId}`, {method: 'GET'})
+    fetch(`http://80.78.246.194:8000/workshop/${workshopId}`, {method: 'GET'})
         .then(r => r.json())
         .then(r => r.data);
 
 const clientifyImage = img =>
-    `http://31.31.199.170/${img.slice(2)}`;
+    `http://80.78.246.194/${img}`;
 
 const clientifyTutor = tutor => ({
     ...tutor,
@@ -30,9 +30,5 @@ const getWorkshops = async () => {
 
     return workshops.map(clientifyWorkshop);
 };
-
-// if (require.main === module) {
-//     getWorkshops().then(console.log);
-// }
 
 module.exports = getWorkshops;

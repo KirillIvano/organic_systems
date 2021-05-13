@@ -10,6 +10,7 @@ createCarousel(
         items: 1,
         autoplay: true,
         loop: true,
+        navText: ['<div class=\'nav-btn prev-slide\'></div>','<div class=\'nav-btn next-slide\'></div>'],
         dots: false,
     },
 );
