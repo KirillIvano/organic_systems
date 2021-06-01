@@ -1,17 +1,17 @@
 const fetch = require('node-fetch');
 
 const fetchWorkshopsPreviews = () =>
-    fetch('http://80.78.246.194:8000/workshops', {method: 'GET'})
+    fetch('https://api.organiccolorsystems.ru/workshops', {method: 'GET'})
         .then(r => r.json())
         .then(r => r.data.workshops);
 
 const fetchWorkshop = (workshopId) =>
-    fetch(`http://80.78.246.194:8000/workshop/${workshopId}`, {method: 'GET'})
+    fetch(`https://api.organiccolorsystems.ru/workshop/${workshopId}`, {method: 'GET'})
         .then(r => r.json())
         .then(r => r.data);
 
 const clientifyImage = img =>
-    `http://80.78.246.194/${img}`;
+    `https://organiccolorsystems.ru/${img}`;
 
 const clientifyTutor = tutor => ({
     ...tutor,

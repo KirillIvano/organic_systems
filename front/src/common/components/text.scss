@@ -38,6 +38,7 @@
     text-align: center;
 }
 
+
 .text_dark {
     color: $black;
 }
@@ -52,5 +53,9 @@
 
     .heading_secondary {
         font-size: $font_lg;
+    }
+
+    .text_mobile-started {
+        text-align: start;
     }
 }

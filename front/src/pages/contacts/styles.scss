@@ -1,0 +1,3271 @@
+.contacts__message-box {
+    text-align: end;
+}
+.message_success {
+    color: green;
+    font-size: 20px;
+}
+.message_error {
+    color: red;
+    font-size: 20px;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/default/files/fontyourface/font.css?pzxgm7 */
+.page-node-623 h3 {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: normal;
+}
+
+.pane-1 h1,
+.page-node-623 h2,
+.page-node-623 h4 {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/modules/system/system.base.css?pzxgm7 */
+
+/**
+ * @file
+ * Generic theme-independent base styles.
+ */
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+
+/* Suggestion list */
+#autocomplete {
+    border: 1px solid;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+}
+
+#autocomplete ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+#autocomplete li {
+    background: #fff;
+    color: #000;
+    cursor: default;
+    white-space: pre;
+    zoom: 1;
+
+    /* IE7 */
+}
+
+/* Animated throbber */
+html.js input.form-autocomplete {
+    background-image: /*savepage-url=../../misc/throbber-inactive.png*/
+                url();
+    background-position: 100% center;
+
+    /* LTR */
+    background-repeat: no-repeat;
+}
+
+html.js input.throbbing {
+    background-image: /*savepage-url=../../misc/throbber-active.gif*/
+                url();
+    background-position: 100% center;
+
+    /* LTR */
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+html.js fieldset.collapsed {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    height: 1em;
+}
+
+html.js fieldset.collapsed .fieldset-wrapper {
+    display: none;
+}
+
+fieldset.collapsible {
+    position: relative;
+}
+
+fieldset.collapsible .fieldset-legend {
+    display: block;
+}
+
+/**
+ * Resizable textareas.
+ *
+ * @see textarea.js
+ */
+.form-textarea-wrapper textarea {
+    display: block;
+    margin: 0;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.resizable-textarea .grippie {
+    background:
+        #eee
+        url() no-repeat center;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    cursor: s-resize;
+    height: 9px;
+    overflow: hidden;
+}
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+body.drag {
+    cursor: move;
+}
+
+.draggable a.tabledrag-handle {
+    cursor: move;
+    float: left;
+
+    /* LTR */
+    height: 1.7em;
+    margin-left: -1em;
+
+    /* LTR */
+    overflow: hidden;
+    text-decoration: none;
+}
+
+a.tabledrag-handle:hover {
+    text-decoration: none;
+}
+
+a.tabledrag-handle .handle {
+    background: /*savepage-url=../../misc/draggable.png*/
+                url() no-repeat 6px 9px;
+    height: 13px;
+    margin: -0.4em 0.5em;
+
+    /* LTR */
+    padding: 0.42em 0.5em;
+
+    /* LTR */
+    width: 13px;
+}
+
+a.tabledrag-handle-hover .handle {
+    background-position: 6px -11px;
+}
+
+div.indentation {
+    float: left;
+
+    /* LTR */
+    height: 1.7em;
+    margin: -0.4em 0.2em -0.4em -0.4em;
+
+    /* LTR */
+    padding: 0.42em 0 0.42em 0.6em;
+
+    /* LTR */
+    width: 20px;
+}
+
+div.tree-child {
+    background: /*savepage-url=../../misc/tree.png*/
+                url() no-repeat 11px center;
+
+    /* LTR */
+}
+
+div.tree-child-last {
+    background: /*savepage-url=../../misc/tree-bottom.png*/
+                url() no-repeat 11px center;
+
+    /* LTR */
+}
+
+div.tree-child-horizontal {
+    background: /*savepage-url=../../misc/tree.png*/
+                url() no-repeat -11px center;
+}
+
+.tabledrag-toggle-weight-wrapper {
+    text-align: right;
+
+    /* LTR */
+}
+
+/**
+ * TableHeader behavior.
+ *
+ * @see tableheader.js
+ */
+table.sticky-header {
+    background-color: #fff;
+    margin-top: 0;
+}
+
+/**
+ * Progress behavior.
+ *
+ * @see progress.js
+ */
+
+/* Bar */
+.progress .bar {
+    background-color: #fff;
+    border: 1px solid;
+}
+
+.progress .filled {
+    background-color: #000;
+    height: 1.5em;
+    width: 5px;
+}
+
+.progress .percentage {
+    float: right;
+
+    /* LTR */
+}
+
+/* Throbber */
+.ajax-progress {
+    display: inline-block;
+}
+
+.ajax-progress .throbber {
+    float: left;
+
+    /* LTR */
+    height: 15px;
+    margin: 2px;
+    width: 15px;
+}
+
+.ajax-progress .message {
+    padding-left: 20px;
+}
+
+tr .ajax-progress .throbber {
+    margin: 0 2px;
+}
+
+.ajax-progress-bar {
+    width: 16em;
+}
+
+/**
+ * Inline items.
+ */
+.container-inline div,
+.container-inline label {
+    display: inline;
+}
+
+/* Fieldset contents always need to be rendered as block. */
+.container-inline .fieldset-wrapper {
+    display: block;
+}
+
+/**
+ * Prevent text wrapping.
+ */
+.nowrap {
+    white-space: nowrap;
+}
+
+/**
+ * For anything you want to hide on page load when JS is enabled, so
+ * that you can use the JS to control visibility and avoid flicker.
+ */
+html.js .js-hide {
+    display: none;
+}
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden {
+    display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+}
+
+/**
+ * The .element-focusable class extends the .element-invisible class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+    position: static !important;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+.clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* IE6 */
+* html .clearfix {
+    height: 1%;
+}
+
+/* IE7 */
+*:first-child + html .clearfix {
+    min-height: 1%;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/modules/field/theme/field.css?pzxgm7 */
+
+/* Field display */
+.field .field-label {
+    font-weight: bold;
+}
+
+.field-label-inline .field-label,
+.field-label-inline .field-items {
+    float: left;
+
+    /* LTR */
+}
+
+/* Form display */
+form .field-multiple-table {
+    margin: 0;
+}
+
+form .field-multiple-table th.field-label {
+    padding-left: 0;
+
+    /* LTR */
+}
+
+form .field-multiple-table td.field-multiple-drag {
+    width: 30px;
+    padding-right: 0;
+
+    /* LTR */
+}
+
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
+    padding-right: 0.5em;
+
+    /* LTR */
+}
+
+form .field-add-more-submit {
+    margin: 0.5em 0 0;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/modules/node/node.css?pzxgm7 */
+.node-unpublished {
+    background-color: #fff4f4;
+}
+
+.preview .node {
+    background-color: #ffffea;
+}
+
+td.revision-current {
+    background: #ffc;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/modules/search/search.css?pzxgm7 */
+.search-form {
+    margin-bottom: 1em;
+}
+
+.search-form input {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.search-results {
+    list-style: none;
+}
+
+.search-results p {
+    margin-top: 0;
+}
+
+.search-results .title {
+    font-size: 1.2em;
+}
+
+.search-results li {
+    margin-bottom: 1em;
+}
+
+.search-results .search-snippet-info {
+    padding-left: 1em;
+
+    /* LTR */
+}
+
+.search-results .search-info {
+    font-size: 0.85em;
+}
+
+.search-advanced .criterion {
+    float: left;
+
+    /* LTR */
+    margin-right: 2em;
+
+    /* LTR */
+}
+
+.search-advanced .action {
+    float: left;
+
+    /* LTR */
+    clear: left;
+
+    /* LTR */
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/modules/user/user.css?pzxgm7 */
+#permissions td.module {
+    font-weight: bold;
+}
+
+#permissions td.permission {
+    padding-left: 1.5em;
+
+    /* LTR */
+}
+
+#permissions tr.odd .form-item,
+#permissions tr.even .form-item {
+    white-space: normal;
+}
+
+#user-admin-settings fieldset .fieldset-description {
+    font-size: 0.85em;
+    padding-bottom: 0.5em;
+}
+
+/**
+* Override default textfield float to put the "Add role" button next to
+* the input textfield.
+*/
+#user-admin-roles td.edit-name {
+    clear: both;
+}
+
+#user-admin-roles .form-item-name {
+    float: left;
+
+    /* LTR */
+    margin-right: 1em;
+
+    /* LTR */
+}
+
+/**
+* Password strength indicator.
+*/
+.password-strength {
+    width: 17em;
+    float: right;
+
+    /* LTR */
+    margin-top: 1.4em;
+}
+
+.password-strength-title {
+    display: inline;
+}
+
+.password-strength-text {
+    float: right;
+
+    /* LTR */
+    font-weight: bold;
+}
+
+.password-indicator {
+    background-color: #c4c4c4;
+    height: 0.3em;
+    width: 100%;
+}
+
+.password-indicator div {
+    height: 100%;
+    width: 0%;
+    background-color: #47c965;
+}
+
+input.password-confirm,
+input.password-field {
+    width: 16em;
+    margin-bottom: 0.4em;
+}
+
+div.password-confirm {
+    float: right;
+
+    /* LTR */
+    margin-top: 1.5em;
+    visibility: hidden;
+    width: 17em;
+}
+
+div.form-item div.password-suggestions {
+    padding: 0.2em 0.5em;
+    margin: 0.7em 0;
+    width: 38.5em;
+    border: 1px solid #b4b4b4;
+}
+
+div.password-suggestions ul {
+    margin-bottom: 0;
+}
+
+.confirm-parent,
+.password-parent {
+    clear: left;
+
+    /* LTR */
+    margin: 0;
+    width: 36.3em;
+}
+
+/* Generated by user.module but used by profile.module: */
+.profile {
+    clear: both;
+    margin: 1em 0;
+}
+
+.profile .user-picture {
+    float: right;
+
+    /* LTR */
+    margin: 0 1em 1em 0;
+
+    /* LTR */
+}
+
+.profile h3 {
+    border-bottom: 1px solid #ccc;
+}
+
+.profile dl {
+    margin: 0 0 1.5em 0;
+}
+
+.profile dt {
+    margin: 0 0 0.2em 0;
+    font-weight: bold;
+}
+
+.profile dd {
+    margin: 0 0 1em 0;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/views/css/views.css?pzxgm7 */
+.views-exposed-form .views-exposed-widget {
+    float: left;
+
+    /* LTR */
+    padding: 0.5em 1em 0 0;
+
+    /* LTR */
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 1.6em;
+}
+
+.views-exposed-form .form-item,
+.views-exposed-form .form-submit {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.views-exposed-form label {
+    font-weight: bold;
+}
+
+.views-exposed-widgets {
+    margin-bottom: 0.5em;
+}
+
+/* table style column align */
+.views-align-left {
+    text-align: left;
+}
+
+.views-align-right {
+    text-align: right;
+}
+
+.views-align-center {
+    text-align: center;
+}
+
+/* Remove the border on tbody that system puts in */
+.views-view-grid tbody {
+    border-top: none;
+}
+
+.view .progress-disabled {
+    float: none;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/ckeditor/css/ckeditor.css?pzxgm7 */
+
+/* General indentation & positioning classes */
+
+.rteindent1 {
+    margin-left: 40px;
+}
+
+.rteindent2 {
+    margin-left: 80px;
+}
+
+.rteindent3 {
+    margin-left: 120px;
+}
+
+.rteindent4 {
+    margin-left: 160px;
+}
+
+.rteleft {
+    text-align: left;
+}
+
+.rteright {
+    text-align: right;
+}
+
+.rtecenter {
+    text-align: center;
+}
+
+.rtejustify {
+    text-align: justify;
+}
+
+.ibimage_left {
+    float: left;
+}
+
+.ibimage_right {
+    float: right;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/ctools/css/ctools.css?pzxgm7 */
+.ctools-locked {
+    color: red;
+    border: 1px solid red;
+    padding: 1em;
+}
+
+.ctools-owns-lock {
+    background: #ffd none repeat scroll 0 0;
+    border: 1px solid #f0c020;
+    padding: 1em;
+}
+
+a.ctools-ajaxing,
+input.ctools-ajaxing,
+button.ctools-ajaxing,
+select.ctools-ajaxing {
+    padding-right: 18px !important;
+    background: /*savepage-url=../images/status-active.gif*/
+        url() right center no-repeat;
+}
+
+div.ctools-ajaxing {
+    float: left;
+    width: 18px;
+    background: /*savepage-url=../images/status-active.gif*/
+        url() center center no-repeat;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/panels/css/panels.css?pzxgm7 */
+div.panel-pane div.admin-links {
+    font-size: xx-small;
+    margin-right: 1em;
+}
+
+div.panel-pane div.admin-links li a {
+    color: #ccc;
+}
+
+div.panel-pane div.admin-links li {
+    padding-bottom: 2px;
+    background: white;
+    z-index: 201;
+}
+
+div.panel-pane div.admin-links:hover a,
+div.panel-pane div.admin-links-hover a {
+    color: #000;
+}
+
+div.panel-pane div.admin-links a::before {
+    content: "[";
+}
+
+div.panel-pane div.admin-links a::after {
+    content: "]";
+}
+
+div.panel-pane div.panel-hide {
+    display: none;
+}
+
+/** For IE we add the class via js; for other browsers we rely on :hover **/
+div.panel-pane div.panel-hide-hover,
+div.panel-pane:hover div.panel-hide {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    margin-top: -1.5em;
+}
+
+div.panel-pane div.feed a {
+    float: right;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/webform/css/webform.css?pzxgm7 */
+
+/**
+* @file
+* Front-end styling for the display of webforms.
+*/
+input.webform-calendar {
+    display: none;
+    padding: 3px;
+    vertical-align: top;
+}
+
+html.js input.webform-calendar {
+    display: inline;
+}
+
+.webform-container-inline label {
+    display: inline;
+    margin-right: 1em;
+}
+
+.webform-container-inline div,
+.webform-container-inline div.form-item {
+    display: inline;
+}
+
+.webform-container-inline div.description {
+    display: block;
+}
+
+.webform-container-inline div.messages {
+    display: block;
+    float: left;
+}
+
+.webform-container-inline div.ajax-progress-bar div {
+    display: inherit;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/yandex_metrics/css/yandex_metrics.css?pzxgm7 */
+.ym-counter {
+    clear: both;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/modules/nice_menus/css/nice_menus.css?pzxgm7 */
+
+/*
+This file contains the basic logic for nice menus, and should not be
+edited.  To customize the menus, it's recommended to create a custom CSS
+file using nice_menus_default.css as a template, then configure the module
+to use your custom CSS file (this is done in the global settings tab of
+the theme administration.)
+*/
+
+/* Below should fix menu being a few pixels away in some themes, and menus disappearing behind other stuff. */
+.block-nice-menus {
+    line-height: normal;
+    z-index: 10;
+}
+
+ul.nice-menu,
+ul.nice-menu ul {
+    z-index: 5;
+    position: relative;
+}
+
+ul.nice-menu li {
+    position: relative;
+}
+
+ul.nice-menu a {
+    display: block;
+
+    /* Default to Blue, but override as necessary */
+
+    /* color: #027ac6; */
+}
+
+ul.nice-menu ul,
+/* For Garland header. */
+#header-region ul.nice-menu ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+ul.nice-menu li.over ul {
+    visibility: visible;
+}
+
+ul.nice-menu ul li {
+    display: block;
+}
+
+ul.nice-menu::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Show submenus when over their parents. */
+ul.nice-menu li:hover ul,
+ul.nice-menu li.menuparent li:hover ul,
+ul.nice-menu li.menuparent li.menuparent li:hover ul,
+ul.nice-menu li.menuparent li.menuparent li.menuparent li:hover ul,
+ul.nice-menu li.over ul,
+ul.nice-menu li.menuparent li.over ul,
+ul.nice-menu li.menuparent li.menuparent li.over ul,
+ul.nice-menu li.menuparent li.menuparent li.menuparent li.over ul,
+/* Repeat all this stuff just for Garland headers. */
+#header-region ul.nice-menu li:hover ul,
+#header-region ul.nice-menu li.menuparent li:hover ul,
+#header-region ul.nice-menu li.menuparent li.menuparent li:hover ul,
+#header-region ul.nice-menu li.over ul,
+#header-region ul.nice-menu li.menuparent li.over ul,
+#header-region ul.nice-menu li.menuparent li.menuparent li.over ul {
+    visibility: visible;
+}
+
+/* Hide sub-menus initially. */
+ul.nice-menu li:hover ul ul,
+ul.nice-menu li:hover ul ul ul,
+ul.nice-menu li:hover li:hover ul ul,
+ul.nice-menu li:hover li:hover ul ul ul,
+ul.nice-menu li:hover li:hover li:hover ul ul,
+ul.nice-menu li:hover li:hover li:hover ul ul ul,
+ul.nice-menu li.over ul ul,
+ul.nice-menu li.over ul ul ul,
+ul.nice-menu li.over li.over ul ul,
+ul.nice-menu li.over li.over ul ul ul,
+ul.nice-menu li.over li.over li.over ul ul,
+ul.nice-menu li.over li.over li.over ul ul ul,
+/* Repeat all this stuff just for Garland headers. */
+#header-region ul.nice-menu li:hover ul ul,
+#header-region ul.nice-menu li:hover ul ul ul,
+#header-region ul.nice-menu li:hover li:hover ul ul,
+#header-region ul.nice-menu li:hover li:hover ul ul ul,
+#header-region ul.nice-menu li:hover li:hover li:hover ul ul,
+#header-region ul.nice-menu li:hover li:hover li:hover ul ul ul,
+#header-region ul.nice-menu li.over ul ul,
+#header-region ul.nice-menu li.over ul ul ul,
+#header-region ul.nice-menu li.over li.over ul ul,
+#header-region ul.nice-menu li.over li.over ul ul ul,
+#header-region ul.nice-menu li.over li.over li.over ul ul,
+#header-region ul.nice-menu li.over li.over li.over ul ul ul {
+    visibility: hidden;
+}
+
+/***************
+IE 6 Fixes
+***************/
+
+/* Iframe to fix z-index bug when menu hovers over <select> fields. */
+ul.nice-menu li.menuparent ul,
+/* For Garland header. */
+#header-region ul.nice-menu li.menuparent ul {
+    overflow: visible !important;
+}
+
+ul.nice-menu li.menuparent ul iframe,
+/* For Garland header. */
+#header-region ul.nice-menu li.menuparent ul iframe {
+    display: none;
+    display
+    /**/: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: mask();
+    width: 20px;
+    height: 20px;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/all/themes/organic/css/main_menu.css?pzxgm7 */
+
+/*
+This is the default layout template for nice menus, and will provide
+a starting point for the look of your menus. To customize, it's
+recommended to create a custom CSS file using this file as a template,
+then configure the module to use your custom CSS file
+(this is done in the global settings tab of the theme administration.)
+
+See README.txt and the handbook page (http://drupal.org/node/185543)
+for more information on using the CSS.
+*/
+
+/******************************
+Global CSS for ALL menu types
+******************************/
+
+ul.nice-menu,
+ul.nice-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.nice-menu li {
+
+    border-top: 0;
+    float: left;
+
+    /* LTR */
+    background-color: #fff;
+}
+
+ul.nice-menu a {
+    padding: 0.3em 5px 0.3em 5px;
+    color: #aea500;
+}
+
+ul.nice-menu ul {
+    top: 1.8em;
+    left: -1px;
+
+    /* LTR */
+    border: 0;
+    margin-right: 0;
+
+    /* LTR */
+}
+
+ul.nice-menu ul li {
+    width: 12.5em;
+}
+
+/******************************
+VERTICAL (left/right) menus
+******************************/
+
+/* This is the default width of all vertical menus. */
+ul.nice-menu-right,
+ul.nice-menu-left,
+ul.nice-menu-right li,
+ul.nice-menu-left li {
+    width: 12.5em;
+}
+
+/* VERTICAL menus where submenus pop RIGHT (default). */
+ul.nice-menu-right ul {
+    width: 12.5em;
+    left: 12.5em;
+    top: -1px;
+}
+
+ul.nice-menu-right ul ul {
+    width: 12.5em;
+    left: 12.5em;
+    top: -1px;
+}
+
+ul.nice-menu-right li.menuparent,
+ul.nice-menu-right li li.menuparent {
+    background:
+        #eee
+        /*savepage-url=arrow-right.png*/
+        url() right center no-repeat;
+}
+
+ul.nice-menu-right li.menuparent:hover,
+ul.nice-menu-right li li.menuparent:hover {
+    background:
+        #fff
+        /*savepage-url=arrow-right.png*/
+        url() right center no-repeat;
+}
+
+/* VERTICAL menus where submenus pop LEFT. */
+ul.nice-menu-left li ul {
+    width: 12.5em;
+    left: -12.65em;
+    top: -1px;
+}
+
+ul.nice-menu-left li ul li ul {
+    width: 12.5em;
+    left: -12.65em;
+    top: -1px;
+}
+
+ul.nice-menu-left li.menuparent,
+ul.nice-menu-left li li.menuparent {
+    background:
+        #fff
+        /*savepage-url=arrow-left.png*/
+        url() left center no-repeat;
+}
+
+ul.nice-menu-left li.menuparent:hover,
+ul.nice-menu-left li li.menuparent:hover {
+    background:
+        #fff
+        /*savepage-url=arrow-left.png*/
+        url() left center no-repeat;
+}
+
+ul.nice-menu-left a,
+ul.nice-menu-left ul a {
+    padding-left: 14px;
+}
+
+/******************************
+HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+    float: left;
+
+    /* LTR */
+    border: 0;
+}
+
+ul.nice-menu-down li {}
+
+ul.nice-menu-down li li {
+    border-top: 0;
+    padding-left: 10px;
+}
+
+ul.nice-menu-down ul {
+    left: 0;
+
+    /* LTR */
+}
+
+ul.nice-menu-down ul li {
+    clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+    left: 12.5em;
+
+    /* LTR */
+    top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+    padding-right: 15px;
+
+    /* LTR */
+}
+
+ul.nice-menu-down li.menuparent {
+    background:
+        #fff
+        /*savepage-url=arrow-down.png*/
+        url() right center no-repeat;
+
+    /* LTR */
+}
+
+ul.nice-menu-down li.menuparent:hover {}
+
+ul.nice-menu-down li li.menuparent {
+    background:
+        #fff
+        /*savepage-url=arrow-right.png*/
+        url() right center no-repeat;
+
+    /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {}
+
+/******************************
+Garland-specific CSS
+******************************/
+
+/**
+* Global CSS for ALL menu types
+*/
+ul.nice-menu li {
+    margin: 0;
+    padding-left: 0;
+
+    /* LTR */
+    background-image: none;
+}
+
+#header-region ul.nice-menu li {
+    margin: 0;
+
+    /* Padding rules are needed to deal with Garland's header line-height. */
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    background: #eee;
+}
+
+#header-region ul.nice-menu ul {
+    top: 1.8em;
+    left: -1px;
+
+    /* LTR */
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-right: 0;
+
+    /* LTR */
+}
+
+#header-region ul.nice-menu ul {
+    top: 1.7em;
+}
+
+/**
+* HORIZONTAL (down) menus
+*/
+#header-region ul.nice-menu-down li ul li ul {
+    left: 12.5em;
+
+    /* LTR */
+    top: -1px;
+}
+
+#header-region ul.nice-menu-down li.menuparent {
+    background:
+        #eee
+        /*savepage-url=arrow-down.png*/
+        url() right center no-repeat;
+
+    /* LTR */
+}
+
+#header-region ul.nice-menu-down li.menuparent:hover {
+    background:
+        #ccc
+        /*savepage-url=arrow-down.png*/
+        url() right center no-repeat;
+
+    /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent {
+    background:
+        #eee
+        /*savepage-url=arrow-right.png*/
+        url() right center no-repeat;
+
+    /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent:hover {
+    background:
+        #ccc
+        /*savepage-url=arrow-right.png*/
+        url() right center no-repeat;
+
+    /* LTR */
+}
+
+#nice-menu-1 {
+    width: 100%;
+    background: #fff;
+}
+
+#nice-menu-1 a {
+    text-decoration: none;
+    padding: 0.2em 25px 0.2em 0;
+}
+
+#nice-menu-1 a:hover {
+    color: #565656;
+}
+
+
+#nice-menu-2 {
+    width: 100%;
+    background: #f2f2f2;
+    border-bottom: 3px solid #aea500;
+    z-index: 2;
+}
+
+#nice-menu-2 li {
+
+    background: #f2f2f2;
+}
+
+#nice-menu-2 a {
+    color: #565656;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 0.2em 75px;
+    border-left: 4px solid #fff;
+}
+
+#nice-menu-2 a:hover {
+    color: #fff;
+    background: #aea500;
+    border-left: 4px solid #fff;
+}
+
+#nice-menu-2 .active {
+    background: #aea500;
+    font-weight: bold;
+    border-bottom: none;
+    color: #fff !important;
+}
+
+#nice-menu-0 a {
+
+    color: #fff;
+}
+
+#nice-menu-0 li {
+
+
+    background-color: #000;
+}
+
+
+#main-menu ul li {
+    float: none;
+}
+
+/* savepage-import-url=https://www.organiccolorsystems.ru/sites/default/files/prepro/sites_all_themes_ocs2_scss_styles.css?pzxgm7 */
+
+/*
+* *
+* * @file
+* * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+* *
+* * When you turn on CSS aggregation at admin/config/development/performance, all
+* * of these @include files will be combined into a single file.
+*/
+
+/*
+* HTML element (SMACSS base) rules
+*/
+
+/*
+* *
+* * @file
+* * Normalize.css is intended to be used as an alternative to CSS resets.
+* *
+* * This file is a slight fork of these original sources:
+* * - normalize.css v2.1.2 | MIT License | git.io/normalize
+* * - normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-scss
+* *
+* * It's suggested that you read the normalize.scss file and customise it to meet
+* * your needs, rather then including the file in your project and overriding the
+* * defaults later in your CSS.
+* * @see http://nicolasgallagher.com/about-normalize-css/
+* *
+* * Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+* *       @see http://snook.ca/archives/html_and_css/no_css_reset/
+*/
+
+/*
+* *
+* * HTML5 display definitions
+*/
+
+/*
+* Correct `block` display not defined in IE 8/9.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+* Correct `inline-block` display not defined in IE 8/9.
+*/
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*
+* *
+* * Prevent modern browsers from displaying `audio` without controls.
+* * Remove excess height in iOS 5 devices.
+*/
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*
+* Address styling not present in IE 8/9.
+*/
+[hidden] {
+    display: none;
+}
+
+/*
+* *
+* * Base
+* *
+* * Instead of relying on the fonts that are available on a user's computer, you
+* * can use web fonts which, like images, are resources downloaded to the user's
+* * browser. Because of the bandwidth and rendering resources required, web fonts
+* * should be used with care.
+* *
+* * Numerous resources for web fonts can be found on Google. Here are a few
+* * websites where you can find Open Source fonts to download:
+* * - http://www.fontsquirrel.com/fontface
+* * - http://www.theleagueofmoveabletype.com
+* *
+* * In order to use these fonts, you will need to convert them into formats
+* * suitable for web fonts. We recommend the free-to-use Font Squirrel's
+* * Font-Face Generator:
+* *   http://www.fontsquirrel.com/fontface/generator
+* *
+* * The following is an example @font-face declaration. This font can then be
+* * used in any ruleset using a property like this:  font-family: Example, serif;
+*/
+
+/*
+*
+* @font-face {
+* font-family: 'Example';
+* src: url(/sites/all/themes/ocs2/fonts/example.eot);
+* src: url(/sites/all/themes/ocs2/fonts/example.eot?iefix) format('eot'),
+* url(/sites/all/themes/ocs2/fonts/example.woff) format('woff'),
+* url(/sites/all/themes/ocs2/fonts/example.ttf) format('truetype'),
+* url(/sites/all/themes/ocs2/fonts/example.svg#webfontOkOndcij) format('svg');
+* font-weight: normal;
+* font-style: normal;
+* }
+*/
+
+/*
+* *
+* * 1. Set default font family to sans-serif.
+* * 2. Prevent iOS text size adjust after orientation change, without disabling
+* *    user zoom.
+* * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+* *    `em` units.
+*/
+html {
+    font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+
+    /*
+* 1
+*/
+
+    /*
+* Delete all but one of the following font-size declarations:
+*/
+
+    /*
+* Use a 12px base font size. 16px x 75% = 12px
+*/
+    font-size: 75%;
+
+    /*
+* 3
+*/
+
+    /*
+* Use a 14px base font size. 16px x .875 = 14px
+*/
+    font-size: 87.5%;
+
+    /*
+* 3
+*/
+
+    /*
+* Use a 16px base font size.
+*/
+    font-size: 100%;
+
+    /*
+* 3
+*/
+    -ms-text-size-adjust: 100%;
+
+    /*
+* 2
+*/
+    -webkit-text-size-adjust: 100%;
+
+    /*
+* 2
+*/
+
+    /*
+* Establish a vertical rhythm.
+*/
+    line-height: 1.5em;
+}
+
+/*
+* Address `font-family` inconsistency between `textarea` and other form elements.
+*/
+button,
+input,
+select,
+textarea {
+    /*
+* *
+* * The following font family declarations are available on most computers.
+* *
+* * A user's web browser will look at the comma-separated list and will
+* * attempt to use each font in turn until it finds one that is available
+* * on the user's computer. The final "generic" font (sans-serif, serif or
+* * monospace) hints at what type of font to use if the web browser doesn't
+* * find any of the fonts in the list.
+* *
+* * font-family: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+* * font-family: Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+* * font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
+* *
+* * font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+* * font-family: Tahoma, Verdana, "DejaVu Sans", sans-serif;
+* * font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+* * font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+* *
+* * font-family: "Courier New", "DejaVu Sans Mono", monospace;
+*/
+    font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+}
+
+/*
+* Remove default margin.
+*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+* *
+* * Links
+* *
+* * The order of link states are based on Eric Meyer's article:
+* * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+*/
+
+
+
+
+/*
+* Address `outline` inconsistency between Chrome and other browsers.
+*/
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+* Improve readability when focused and also mouse hovered in all browsers.
+*/
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/*
+* *
+* * Typography
+* *
+* * To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+* * so that the line height of our base font becomes the basic unit of vertical
+* * measurement. We use multiples of that unit to set the top and bottom margins
+* * for our block level elements and to set the line heights of any fonts.
+* * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+*/
+
+/*
+* Set 1 unit of vertical rhythm on the top and bottom margin.
+*/
+p,
+pre {
+    margin: 1.5em 0;
+}
+
+blockquote {
+    /*
+* Also indent the quote on both sides.
+*/
+    margin: 1.5em 30px;
+}
+
+/*
+* *
+* * Address variable `h1` font-size and margin within `section` and `article`
+* * contexts in Firefox 4+, Safari 5, and Chrome.
+*/
+h1 {
+    /*
+* Set the font-size and line-height while keeping a proper vertical rhythm.
+*/
+    font-size: 2em;
+    line-height: 1.5em;
+
+    /*
+* 3rem / 2em = 1.5em
+*/
+
+    /*
+* Set 1 unit of vertical rhythm on the top and bottom margins.
+*/
+    margin-top: 0.75em;
+
+    /*
+* 1.5rem / 2em = .75em
+*/
+    margin-bottom: 0.75em;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 2em;
+
+    /*
+* 3rem / 1.5em = 2em
+*/
+    margin-top: 1em;
+
+    /*
+* 1.5rem / 1.5em = 1em
+*/
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.17em;
+    line-height: 1.282em;
+
+    /*
+* 1.5rem / 1.17em = 1.28205em
+*/
+    margin-top: 1.282em;
+    margin-bottom: 1.282em;
+}
+
+h4 {
+    font-size: 1em;
+    line-height: 1.5em;
+
+    /*
+* 1.5rem / 1em = 1.5em
+*/
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+h5 {
+    font-size: 0.83em;
+    line-height: 1.807em;
+
+    /*
+* 1.5rem / 0.83em = 1.80723em
+*/
+    margin-top: 1.807em;
+    margin-bottom: 1.807em;
+}
+
+h6 {
+    font-size: 0.67em;
+    line-height: 2.239em;
+
+    /*
+* 1.5rem / 0.67em = 2.23881em
+*/
+    margin-top: 2.239em;
+    margin-bottom: 2.239em;
+}
+
+/*
+* Address styling not present in IE 8/9, Safari 5, and Chrome.
+*/
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+*/
+b,
+strong {
+    font-weight: bold;
+}
+
+/*
+* Address styling not present in Safari 5 and Chrome.
+*/
+dfn {
+    font-style: italic;
+}
+
+/*
+* Address differences between Firefox and other browsers.
+*/
+hr {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    border: 1px solid #666;
+    padding-bottom: -1px;
+    margin: 1.5em 0;
+}
+
+/*
+* Address styling not present in IE 8/9.
+*/
+mark {
+    background: yellow;
+    color: black;
+}
+
+/*
+* Correct font family set oddly in Safari 5 and Chrome.
+*/
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+    font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/*
+* Improve readability of pre-formatted text in all browsers.
+*/
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+* Set consistent quote types.
+*/
+q {
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+/*
+* Address inconsistent and variable font size in all browsers.
+*/
+small {
+    font-size: 80%;
+}
+
+/*
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/*
+* *
+* * Lists
+*/
+dl,
+menu,
+ol,
+ul {
+    /*
+* Address margins set differently in IE 6/7.
+*/
+    margin: 1.5em 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    /*
+* Turn off margins on nested lists.
+*/
+    margin: 0;
+}
+
+dd {
+    margin: 0 0 0 30px;
+
+    /*
+* LTR
+*/
+}
+
+/*
+* Address paddings set differently in IE 6/7.
+*/
+menu,
+ol,
+ul {
+    padding: 0 0 0 30px;
+
+    /*
+* LTR
+*/
+}
+
+/*
+* Correct list images handled incorrectly in IE 7.
+*/
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+/*
+* *
+* * Embedded content and figures
+* *
+* * @todo Look into adding responsive embedded video.
+*/
+img {
+    /*
+* Remove border when inside `a` element in IE 8/9.
+*/
+    border: 0;
+
+    /*
+* Improve image quality when scaled in IE 7.
+*/
+    -ms-interpolation-mode: bicubic;
+
+    /*
+* Suppress the space beneath the baseline
+*/
+
+    /*
+* vertical-align: bottom;
+*/
+
+    /*
+* Responsive images
+*/
+    max-width: 100%;
+    height: auto;
+
+    /*
+* Correct IE 8 not scaling image height when resized.
+*/
+    width: auto;
+}
+
+/*
+* Correct overflow displayed oddly in IE 9.
+*/
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/*
+* Address margin not present in IE 8/9 and Safari 5.
+*/
+figure {
+    margin: 0;
+}
+
+/*
+* *
+* * Forms
+*/
+
+/*
+* Correct margin displayed oddly in IE 6/7.
+*/
+form {
+    margin: 0;
+}
+
+/*
+* Define consistent border, margin, and padding.
+*/
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: 0.5em 0.625em 1em;
+}
+
+/*
+* *
+* * 1. Correct `color` not being inherited in IE 8/9.
+* * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+* * 3. Correct alignment displayed oddly in IE 6/7.
+*/
+legend {
+    border: 0;
+
+    /*
+* 1
+*/
+    padding: 0;
+
+    /*
+* 2
+*/
+    *margin-left: -7px;
+
+    /*
+* 3
+*/
+
+    /*
+* LTR
+*/
+}
+
+/*
+* *
+* * 1. Correct font family not being inherited in all browsers.
+* * 2. Correct font size not being inherited in all browsers.
+* * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+* * 4. Improve appearance and consistency with IE 6/7.
+* * 5. Keep form elements constrained in their containers.
+*/
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+
+    /*
+* 1
+*/
+    font-size: 100%;
+
+    /*
+* 2
+*/
+    margin: 0;
+
+    /*
+* 3
+*/
+    vertical-align: baseline;
+
+    /*
+* 4
+*/
+    *vertical-align: middle;
+
+    /*
+* 4
+*/
+    max-width: 100%;
+
+    /*
+* 5
+*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /*
+* 5
+*/
+}
+
+/*
+* *
+* * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* * the UA stylesheet.
+*/
+button,
+input {
+    line-height: normal;
+}
+
+/*
+* *
+* * Address inconsistent `text-transform` inheritance for `button` and `select`.
+* * All other form control elements do not inherit `text-transform` values.
+* * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+* * Correct `select` style inheritance in Firefox 4+ and Opera.
+*/
+button,
+select {
+    text-transform: none;
+}
+
+/*
+* *
+* * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+* *    and `video` controls.
+* * 2. Correct inability to style clickable `input` types in iOS.
+* * 3. Improve usability and consistency of cursor style between image-type
+* *    `input` and others.
+* * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+* *    Known issue: inner spacing remains in IE 6.
+*/
+
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+
+    /*
+* 2
+*/
+    cursor: pointer;
+
+    /*
+* 3
+*/
+    *overflow: visible;
+
+    /*
+* 4
+*/
+}
+
+/*
+* *
+* * Re-set default cursor for disabled elements.
+*/
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/*
+* *
+* * 1. Address box sizing set to `content-box` in IE 8/9.
+* * 2. Remove excess padding in IE 8/9.
+* * 3. Remove excess padding in IE 7.
+* *    Known issue: excess padding remains in IE 6.
+*/
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /*
+* 1
+*/
+    padding: 0;
+
+    /*
+* 2
+*/
+    *height: 13px;
+
+    /*
+* 3
+*/
+    *width: 13px;
+
+    /*
+* 3
+*/
+}
+
+/*
+* *
+* * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+* * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+* *    (include `-moz` to future-proof).
+*/
+input[type="search"] {
+    -webkit-appearance: textfield;
+
+    /*
+* 1
+*/
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+    /*
+* 2
+*/
+}
+
+/*
+* *
+* * Remove inner padding and search cancel button in Safari 5 and Chrome
+* * on OS X.
+*/
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+* Remove inner padding and border in Firefox 4+.
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+* *
+* * 1. Remove default vertical scrollbar in IE 8/9.
+* * 2. Improve readability and alignment in all browsers.
+*/
+textarea {
+    overflow: auto;
+
+    /*
+* 1
+*/
+    vertical-align: top;
+
+    /*
+* 2
+*/
+}
+
+/*
+* Drupal-style form labels.
+*/
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/*
+* *
+* * Tables
+*/
+table {
+    /*
+* Remove most spacing between table cells.
+*/
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    /*
+* Prevent cramped-looking tables
+*/
+
+    /*
+* width: 100%;
+*/
+
+    /*
+* Add vertical rhythm margins.
+*/
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/*
+* Layout rules
+*/
+
+/*
+* Component (SMACSS module) rules
+*/
+
+/*
+* Optionally, add your own components here.
+*/
+
+/*
+* *
+* * @file
+* * Print styling
+* *
+* * We provide some sane print styling for Drupal using Zen's layout method.
+*/
+
+/*
+* *
+* * By importing this CSS file as media "all", we allow this print file to be
+* * aggregated with other stylesheets, for improved front-end performance.
+*/
+@media print {
+    /*
+* Underline all links.
+*/
+    a:link,
+    a:visited {
+        text-decoration: underline !important;
+    }
+
+    /*
+* Don't underline header.
+*/
+    a:link.header__site-link,
+    a:visited.header__site-link {
+        text-decoration: none !important;
+    }
+
+    /*
+* Add visible URL after links.
+*/
+    #content a[href]::after {
+        content: " ("attr(href) ")";
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    /*
+* Only display useful links.
+*/
+    #content a[href^="javascript:"]::after,
+    #content a[href^="#"]::after {
+        content: "";
+    }
+
+    /*
+* Add visible title after abbreviations.
+*/
+    #content abbr[title]::after {
+        content: " ("attr(title) ")";
+    }
+
+    /*
+* Un-float the content.
+*/
+    #content {
+        float: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /*
+* Turn off any background colors or images.
+*/
+    body,
+    #page,
+    #main,
+    #content {
+        color: black;
+        background-color: rgba(0, 0, 0, 0) !important;
+        background-image: none !important;
+    }
+
+    /*
+* Hide sidebars and nav elements.
+*/
+    #skip-link,
+    #toolbar,
+    #navigation,
+    .region-sidebar-first,
+    .region-sidebar-second,
+    #footer,
+    .breadcrumb,
+    .tabs,
+    .action-links,
+    .links,
+    .book-navigation,
+    .forum-topic-navigation,
+    .pager,
+    .feed-icons {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+p,
+ul,
+ol,
+div {
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: black;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2.5em;
+    line-height: 1.2em;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.4rem;
+}
+
+h2 {
+    line-height: 1.3em;
+}
+
+h3 {
+    line-height: 1.4em;
+}
+
+a {
+    outline: none;
+    color: black;
+}
+
+#skip-link {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+
+    .footer,
+    .header-wrapper {
+        padding: 0 30px;
+    }
+}
+
+.header-wrapper .layout-center,
+.bottom-wrapper .layout-center,
+.header-top .layout-center {
+    max-width: 1165px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 9990;
+    background: black;
+    color: white;
+}
+
+@media screen and (min-width: 700px) {
+    .header-wrapper {
+        width: calc(100% - 60px);
+    }
+}
+
+.header-top {
+    color: black;
+    background: #abdeb7;
+}
+
+.header__logo-image {
+    width: 120px;
+    height: auto;
+    padding-top: 8px;
+}
+
+@media screen and (min-width: 700px) {
+    .header__logo-image {
+        width: 200px;
+    }
+}
+
+article {
+    padding-bottom: 8em;
+}
+
+.bottom-wrapper {
+    background-color: black;
+    color: white;
+    padding: 2em 0;
+}
+
+.bottom-wrapper p,
+.bottom-wrapper div,
+.bottom-wrapper a {
+    color: white;
+}
+
+.not-front {
+    background: white;
+}
+
+blockquote {
+    margin: 2.5rem 0 4rem;
+    padding: 1em 30px 1.5em;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+blockquote p {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/*
+* MENU
+*/
+#b2bOpenNav {
+    z-index: 1;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    #b2bOpenNav {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 64px;
+    }
+}
+
+.region-navigation {
+    float: right;
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+
+@media all and (max-width: 700px) {
+    .region-navigation {
+        width: 20%;
+        float: right;
+    }
+}
+
+#main-menu {
+    float: right;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#main-menu ul {
+    padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+    #main-menu ul {
+        -moz-transform: translateX(1.5em);
+        -webkit-transform: translateX(1.5em);
+        -o-transform: translateX(1.5em);
+        -ms-transform: translateX(1.5em);
+        transform: translateX(1.5em);
+    }
+
+    #main-menu ul ul {
+        padding-top: 0.5em;
+    }
+
+    #main-menu ul ul li a {
+        padding: 0.2em 1.5em;
+    }
+}
+
+#main-menu ul ul {
+    margin-top: 0;
+    -moz-transform: none;
+    -webkit-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+#main-menu ul li {
+    list-style: none;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#main-menu ul li .menu__link,
+#main-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    margin-right: 0;
+    padding: 0.5em 0 0.4em;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 700px) {
+
+    #main-menu ul li .menu__link,
+    #main-menu ul li a {
+        font-size: 16px;
+    }
+
+    #main-menu ul li .menu__link::after,
+    #main-menu ul li a::after {
+        width: 100%;
+
+        /*
+        * Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+25,080054+41,000935+50,080054+60,ffffff+75,ffffff+75,ffffff+100
+        */
+        background: rgba(8, 0, 84, 0);
+
+        /*
+        * Old browsers
+        */
+        background: -moz-linear-gradient(left, rgba(8, 0, 84, 0) 0%, rgba(8, 0, 84, 0) 25%, #080054 41%, #000935 50%, #080054 60%, rgba(8, 0, 84, 0) 75%, rgba(8, 0, 84, 0) 75%, rgba(8, 0, 84, 0) 100%);
+
+        /*
+        * FF3.6-15
+        */
+        background: -webkit-linear-gradient(left, rgba(8, 0, 84, 0) 0%, rgba(8, 0, 84, 0) 25%, #080054 41%, #000935 50%, #080054 60%, rgba(8, 0, 84, 0) 75%, rgba(8, 0, 84, 0) 75%, rgba(8, 0, 84, 0) 100%);
+
+        /*
+        * Chrome10-25,Safari5.1-6
+        */
+        background: linear-gradient(to right, rgba(8, 0, 84, 0) 0%, rgba(8, 0, 84, 0) 25%, #080054 41%, #000935 50%, #080054 60%, rgba(8, 0, 84, 0) 75%, rgba(8, 0, 84, 0) 75%, rgba(8, 0, 84, 0) 100%);
+
+        /*
+        * W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+        */
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=1);
+
+        /*
+        * IE6-9
+        */
+        background-position: left top;
+        background-size: 400%;
+        background-repeat: none;
+        height: 1px;
+        margin-top: 5px;
+        overflow: hidden;
+        content: '.';
+        clear: both;
+        display: block;
+        -webkit-transition: background 1s ease;
+        -moz-transition: background 1s ease;
+        -ms-transition: background 1s ease;
+        -o-transition: background 1s ease;
+        transition: background 1s ease;
+    }
+
+    #main-menu ul li .menu__link:hover::after,
+    #main-menu ul li a:hover::after {
+        background-position: right top;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    #main-menu ul li .menu__link,
+    #main-menu ul li a {
+        padding: 0.5em 0 0.4em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #main-menu {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: black;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    #main-menu.active {
+        width: 100%;
+
+        /*
+* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#150135+11,000000+61,000000+100
+*/
+        background: black;
+
+        /*
+* Old browsers
+*/
+    }
+
+    #main-menu ul {
+        width: 100%;
+        padding: 0;
+        margin-top: 70px;
+    }
+
+    #main-menu ul ul {
+        display: block !important;
+        visibility: visible !important;
+        position: static;
+        margin-top: 0 !important;
+    }
+
+    #main-menu ul ul li a {
+        font-size: 18px;
+        text-transform: none;
+        font-weight: 100;
+        letter-spacing: normal;
+    }
+
+    #main-menu ul a {
+        padding: 5px;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        padding: 0.5em 0;
+    }
+
+    #main-menu ul a:hover,
+    #main-menu ul a:focus {
+        color: #10002e;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    ul.nice-menu ul {
+        display: block !important;
+        visibility: visible !important;
+        position: static;
+        margin-top: 0 !important;
+    }
+
+    ul.nice-menu ul li a {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    ul.nice-menu ul {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .b2b-menu-hide nav {
+        top: -73px;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+}
+
+#b2bCloseNav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 700px) {
+    #b2bCloseNav {
+        display: block;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    #b2bCloseNav {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    ul.nice-menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+#b2bOpenNav {
+    width: 30px;
+    height: 36px;
+}
+
+#b2bOpenNav div {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background: white;
+}
+
+@media all and (min-width: false) {
+    #b2bOpenNav {
+        display: none;
+    }
+}
+
+/*
+* End menu
+*/
+#block-block-7 {
+    margin: 0;
+    text-align: right;
+    padding: 10px 0;
+}
+
+#block-block-7 p {
+    margin: 0;
+}
+
+h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 2em;
+}
+
+h2::after {
+    border-bottom: 2px solid black;
+    content: "";
+    display: block;
+    margin: 1em 0;
+    width: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 700px) {
+    h2 {
+        font-size: 36px;
+        margin-top: 2em;
+    }
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: center;
+    max-width: 600px;
+    margin: 1em auto;
+}
+
+@media screen and (min-width: 700px) {
+    h3 {
+        font-size: 21px;
+        line-height: 1.5em;
+    }
+}
+
+.ocs-button-black {
+    position: relative;
+    display: table;
+    min-width: 8.75rem;
+    padding: 0.625rem 1.25rem;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ocs-button-black:hover {
+    background: black;
+    color: white;
+}
+
+.ocs-button-white {
+    position: relative;
+    display: table;
+    min-width: 8.75rem;
+    padding: 0.625rem 1.25rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ocs-button-white:hover {
+    background: white;
+    color: black;
+}
+
+.pane-wrapper {
+    padding: 0 30px;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-wrapper {
+        max-width: 1165px;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+    }
+
+    .pane-wrapper h2,
+    .pane-wrapper h3,
+    .pane-wrapper div,
+    .pane-wrapper p,
+    .pane-wrapper ul {
+        width: 45%;
+        max-width: 420px;
+    }
+}
+
+.pane-1 {
+    background: /*savepage-url=/sites/all/themes/ocs2/images/banner2.jpg*/
+        var(--savepage-url-17) top right no-repeat;
+    background-size: 130%;
+    background-color: black;
+    color: white;
+    padding-top: 60%;
+    padding-bottom: 40px;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-1 {
+        background: /*savepage-url=/sites/all/themes/ocs2/images/banner2.jpg*/
+            var(--savepage-url-17) center center no-repeat;
+        background-size: cover;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0;
+    }
+}
+
+.pane-1 p {
+    margin: 1.5em 0 0 0;
+    color: white;
+    font-size: 16px;
+    max-width: 400px;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+}
+
+.pane-1 h1,
+.pane-1 h2,
+.pane-1 h3,
+.pane-1 h4 {
+    color: white;
+    max-width: 400px;
+}
+
+.pane-1 h1 {
+    font-size: 36px;
+    line-height: 1em;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    color: white;
+    margin-left: -0.08em;
+    text-indent: -0.04em;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-1 h1 {
+        font-size: 50px;
+        line-height: 1em;
+        letter-spacing: 0.02em;
+    }
+}
+
+.pane-1 h3 {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.pane-1 a {
+    color: white;
+}
+
+.pane-1 .pane-wrapper {
+    padding: 0 30px;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-1 .pane-wrapper {
+        max-width: 1165px;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+    }
+}
+
+.pane-2 h3 {
+    padding: 0 30px;
+}
+
+.ocspros {
+    width: 50%;
+    text-align: center;
+    background: #abdeb7;
+    width: calc(100% - 60px);
+    padding: 50px 30px 55px;
+}
+
+.ocspros h4 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.ocspros p {
+    margin: 0.5em 0 0 0;
+}
+
+@media screen and (min-width: 700px) {
+    .ocspros {
+        width: calc(50% - 60px);
+        float: left;
+    }
+}
+
+.pros2 {
+    background: black;
+    color: white;
+}
+
+.pros2 p {
+    color: white;
+}
+
+.pane-2 h3 {
+    margin-bottom: 3em;
+}
+
+.pane-3 {
+    clear: both;
+    padding-top: 2em;
+    text-align: center;
+}
+
+.pane-3 img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-3 img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.pane-3 a {
+    margin: 0 auto;
+}
+
+.pane-3 .ocs-button-black {
+    margin-top: 4em;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-3 .ocs-button-black {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.pane-4 {
+    background-color: #f6f5f9;
+    background-image: /*savepage-url=/sites/all/themes/ocs2/images/sterter.jpg*/
+        var(--savepage-url-20);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    padding: 100% 0 6em;
+    margin-top: 5em;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-4 {
+        padding: 3em 30px 6em;
+        background-image: /*savepage-url=/sites/all/themes/ocs2/images/sterter.jpg*/
+            var(--savepage-url-20);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center right;
+    }
+}
+
+.pane-4 h2 {
+    font-size: 24px;
+    line-height: 1.4em;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-4 h2 {
+        font-size: 28px;
+        line-height: 1.4em;
+        text-align: left;
+    }
+
+    .pane-4 h2::after {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.pane-4 ul {
+    padding: 0;
+}
+
+.pane-4 ul li {
+    list-style: none;
+    margin: 1em 0;
+}
+
+.pane-5 {
+    padding: 3em 30px 2em;
+    width: calc(100% - 60px);
+}
+
+.pane-6 {
+    background-color: #f6c1b4;
+    background-image: /*savepage-url=/sites/all/themes/ocs2/images/about1.jpg*/
+        var(--savepage-url-22);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    padding: 120% 0 6em;
+    margin-top: 5em;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-6 {
+        background-image: /*savepage-url=/sites/all/themes/ocs2/images/about1.jpg*/
+            var(--savepage-url-22);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center right;
+        padding: 3em 30px 6em;
+    }
+}
+
+.pane-6 h2 {
+    font-size: 24px;
+    line-height: 1.4em;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-6 h2 {
+        font-size: 28px;
+        line-height: 1.4em;
+        text-align: left;
+    }
+
+    .pane-6 h2::after {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.pane-7 {
+    background-color: #abdeb7;
+    background-image: /*savepage-url=/sites/all/themes/ocs2/images/about2.jpg*/
+        var(--savepage-url-23);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    padding: 110% 0 6em;
+    width: 100%;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-7 {
+        padding: 3em 0 6em;
+        background-size: 50%;
+        background-position: center left;
+    }
+}
+
+.pane-7 h2 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-7 h2 {
+        font-size: 28px;
+        line-height: 1.4em;
+        text-align: left;
+    }
+
+    .pane-7 h2::after {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.pane-7 h3 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.pane-7 p {
+    margin: 1em 0;
+}
+
+.pane-7 .pane-wrapper {
+    width: calc(100% - 60px);
+}
+
+.pane-7 .pane-wrapper h2,
+.pane-7 .pane-wrapper h3,
+.pane-7 .pane-wrapper div,
+.pane-7 .pane-wrapper p,
+.pane-7 .pane-wrapper ul {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-7 .pane-wrapper {
+        margin-left: 55%;
+        width: calc(45% - 60px);
+    }
+}
+
+.pane-8 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.pane-9,
+.pane-10,
+.pane-11 {
+    width: 100%;
+    text-align: center;
+    padding-top: 65%;
+    padding-bottom: 30px;
+}
+
+@media screen and (min-width: 700px) {
+
+    .pane-9,
+    .pane-10,
+    .pane-11 {
+        width: calc(100% / 3);
+        float: left;
+        text-align: center;
+        padding-top: 21%;
+        height: 200px;
+    }
+}
+
+.pane-9 h4,
+.pane-10 h4,
+.pane-11 h4 {
+    font-size: 21px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.pane-9 p,
+.pane-9 div,
+.pane-10 p,
+.pane-10 div,
+.pane-11 p,
+.pane-11 div {
+    margin: 0.5em auto 0;
+    padding: 0 20px;
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.pane-9 {
+    background-color: black;
+    background-image: /*savepage-url=/sites/all/themes/ocs2/images/opit.jpg*/
+        var(--savepage-url-24);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    color: white;
+}
+
+.pane-9 p,
+.pane-9 div {
+    color: white;
+}
+
+.pane-10 {
+    background-image: /*savepage-url=/sites/all/themes/ocs2/images/safety.jpg*/
+        var(--savepage-url-25);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-color: #abdeb7;
+}
+
+.pane-11 {
+    background-color: #f6c1b4;
+    background-image: /*savepage-url=/sites/all/themes/ocs2/images/vigoda.jpg*/
+        var(--savepage-url-26);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+}
+
+.pane-12 {
+    clear: both;
+    padding-top: 2em;
+    text-align: center;
+}
+
+.pane-12 h2 {
+    padding: 0 30px;
+}
+
+.pane-12 p {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-12 p {
+        font-size: 21px;
+    }
+}
+
+.pane-12 a img {
+    margin-left: 15px;
+}
+
+.pane-webform-client-block-624 {
+    max-width: 800px;
+    width: calc(100% - 60px);
+    padding: 2em 30px;
+    margin: 0 auto;
+}
+
+.pane-webform-client-block-624 .form-item {
+    margin: 1em 2.5%;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-webform-client-block-624 .form-item {
+        width: 45%;
+        float: left;
+    }
+}
+
+.pane-webform-client-block-624 label {
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.pane-webform-client-block-624 input[type="submit"] {
+    margin: 1.5em 2.5% 1em;
+    background: black;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media screen and (min-width: 700px) {
+    .pane-webform-client-block-624 input[type="submit"] {
+        width: 45%;
+        float: left;
+    }
+}
+
+.pane-webform-client-block-624 input,
+.pane-webform-client-block-624 select,
+.pane-webform-client-block-624 textarea {
+    display: block;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 0;
+    border: 1px solid black;
+    outline: none;
+}

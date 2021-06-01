@@ -2,7 +2,6 @@ const path = require('path');
 const {DefinePlugin, ProvidePlugin} = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const fs = require('fs');
 
 const SRC_PATH = path.resolve(__dirname, 'src');
@@ -64,7 +63,8 @@ const getHtmlPlugin = pagesDescriptor => {
 
 const getPlugins = pagesDescriptor =>
     Object.values(pagesDescriptor.pages)
-        .map(getHtmlPlugin).reduce((acc, el) => Array.isArray(el) ? [...acc, ...el] : [...acc, el], []);
+        .map(getHtmlPlugin)
+        .reduce((acc, el) => Array.isArray(el) ? [...acc, ...el] : [...acc, el], []);
 
 
 const getBaseConfig = pagesConfig => ({
@@ -77,15 +77,15 @@ const getBaseConfig = pagesConfig => ({
         },
     },
     output: {
+        clean: true,
         path: DIST_PATH,
-        publicPath: '',
+        publicPath: '/',
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].chunk.js',
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new DefinePlugin({
-            __API_ADDRESS__: '"http://80.78.246.194:8000"',
+            __API_ADDRESS__: '"https://api.organiccolorsystems.ru"',
         }),
         new ProvidePlugin({
             $: 'jquery',

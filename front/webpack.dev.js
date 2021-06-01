@@ -83,6 +83,7 @@ const getDevSpecificConfig = () => ({
     devServer: {
         hotOnly: true,
         contentBase: DIST_PATH,
+        publicPath: '/',
         port: '8080',
         headers: {
             'Access-Control-Allow-Origin': '*',

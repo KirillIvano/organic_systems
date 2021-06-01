@@ -2,10 +2,11 @@ const {merge} = require('webpack-merge');
 const CssMinimizer = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJs = require('terser-webpack-plugin');
+const PurgeCss = require('purgecss-webpack-plugin');
+const glob = require('glob-all');
 
-const {getBaseConfig} = require('./webpack.config');
+const {getBaseConfig, SRC_PATH} = require('./webpack.config');
 const pagesConfig = require('./pages.json');
-
 
 const getProdSpecificConfig = () => ({
     mode: 'production',
@@ -14,6 +15,16 @@ const getProdSpecificConfig = () => ({
         minimizer: [
             new TerserJs(),
             new CssMinimizer(),
+            new PurgeCss({
+                paths: glob.sync([
+                    `${SRC_PATH}/**/*.njk`,
+                    `${SRC_PATH}/**/*.ts`,
+                ], {nodir: true}),
+                css: glob.sync([
+                    `${SRC_PATH}/**/*.scss`,
+                ], {nodir: true}),
+                safelist: ['owl.carousel'],
+            }),
         ],
     },
     plugins: [
