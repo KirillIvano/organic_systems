@@ -23,7 +23,8 @@ const getProdSpecificConfig = () => ({
                 css: glob.sync([
                     `${SRC_PATH}/**/*.scss`,
                 ], {nodir: true}),
-                safelist: ['owl.carousel'],
+                // TODO: научиться задавать это в pages.json
+                only: ['contacts'],
             }),
         ],
     },

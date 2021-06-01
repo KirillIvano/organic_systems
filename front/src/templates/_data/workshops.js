@@ -28,6 +28,8 @@ const getWorkshops = async () => {
     const workshopsPreviews = await fetchWorkshopsPreviews();
     const workshops = await Promise.all(workshopsPreviews.map(({id}) => fetchWorkshop(id)));
 
+    console.log(workshops);
+
     return workshops.map(clientifyWorkshop);
 };
 
